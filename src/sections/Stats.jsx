@@ -11,7 +11,7 @@ const imgAvatarVikram = "/assets/image4_1_6.png";
 function TestimonialCard({ left, top, w, name, text, textH, avatar }) {
   return (
     <div
-      className="absolute bg-black border border-white/15 rounded-[24px] flex flex-col gap-4 p-8 animate-fade-in"
+      className="absolute bg-[#100704] border border-[#8b5104] rounded-[24px] flex flex-col gap-4 p-8 animate-fade-in"
       style={{ left, top, width: w, minHeight: 294 }}
     >
       <div className="flex items-center justify-between">
@@ -21,7 +21,7 @@ function TestimonialCard({ left, top, w, name, text, textH, avatar }) {
         </div>
         <img alt={name} className="w-16 h-16 rounded-full object-cover" src={avatar} />
       </div>
-      <hr className="border-white/15" />
+      <hr className="border-[#8b5104]/30" />
       <p className="text-[#939393] text-[20px] leading-relaxed" style={{ minHeight: textH }}>
         {text}
       </p>
