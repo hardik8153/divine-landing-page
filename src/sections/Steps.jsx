@@ -1,6 +1,6 @@
 const imgArrowDown = "/assets/arrow.png";
 const imgAppShowcase1 = "/assets/image13_1_6.png";
-const imgAppShowcase2 = "/assets/image12_1_6.png";
+const imgAppShowcase2 = "/assets/image14_1_6.png";
 const imgAstrologer1 = "/assets/image15_1_6.png";
 const imgQuestion = "/assets/image8_1_6.png";
 
