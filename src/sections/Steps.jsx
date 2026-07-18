@@ -22,9 +22,8 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
       {/* Step image */}
       {image && (
         <div
-          className={`absolute flex items-center justify-center relative ${
-            isGooglePlayBadge ? "" : "rounded-[24px] overflow-hidden bg-[#100704] border border-[#8b5104]/30"
-          }`}
+          className={`absolute flex items-center justify-center relative ${isGooglePlayBadge ? "" : "rounded-[24px] overflow-hidden bg-[#100704] border border-[#8b5104]/30"
+            }`}
           style={{
             left: imgLeft,
             top: 0,
@@ -32,19 +31,7 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
             height: 720,
           }}
         >
-          {/* image9_1_6.png behind the Google Play button */}
-          {isGooglePlayBadge && (
-            <img
-              src="/assets/image9_1_6.png"
-              className="absolute w-[440px] h-[440px] opacity-20 object-contain pointer-events-none select-none z-0"
-              style={{
-                left: "50%",
-                top: "50%",
-                transform: "translate(-50%, -50%)",
-              }}
-              alt=""
-            />
-          )}
+
 
           <img
             alt={tagline}
@@ -108,13 +95,11 @@ export default function Steps({ isMobile }) {
             className="w-[14px] h-[14px] inline-block mr-2 align-middle"
             alt=""
           />
-          <span className="align-middle">
-            Not Sure Where to Start? We Got You
-          </span>
+          <span className="align-middle">Not Sure Where to Start? We Got You</span>
         </div>
 
         <h2>
-          Simple Steps to Start Your{" "}
+          Simple Steps to Start Your {" "}
           <span className="bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent font-bold">
             Journey
           </span>
@@ -145,11 +130,7 @@ export default function Steps({ isMobile }) {
                 border: "none",
               }}
             >
-              <img
-                src="/assets/image9_1_6.png"
-                className="absolute w-[160px] h-[160px] opacity-20 object-contain pointer-events-none select-none z-0"
-                alt=""
-              />
+
               <img
                 src={imgAppShowcase1}
                 alt="Get the App"
@@ -165,10 +146,7 @@ export default function Steps({ isMobile }) {
 
             {/* 3. CTA */}
             <div className="w-[300px] text-left mt-4 mb-8">
-              <a
-                href="#chat"
-                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
-              >
+              <a href="#chat" className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]">
                 Get Started Now
                 <img
                   alt=""
@@ -208,10 +186,7 @@ export default function Steps({ isMobile }) {
 
             {/* 3. CTA */}
             <div className="w-[300px] text-left mt-4 mb-8">
-              <a
-                href="#chat"
-                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
-              >
+              <a href="#chat" className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]">
                 Get Started Now
                 <img
                   alt=""
@@ -251,10 +226,7 @@ export default function Steps({ isMobile }) {
 
             {/* 3. CTA */}
             <div className="w-[300px] text-left mt-4 mb-8">
-              <a
-                href="#chat"
-                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
-              >
+              <a href="#chat" className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]">
                 Get Started Now
                 <img
                   alt=""
@@ -275,6 +247,11 @@ export default function Steps({ isMobile }) {
       <div
         className="absolute h-[2992px] left-0 top-[3972px] w-[1920px] bg-gradient-to-b from-black via-[#150502] to-black -z-10"
       />
+
+      {/* Decorative background image9_1_6.png on top right corner absolute */}
+      <div className="absolute h-[416px] left-[1666px] top-[4074px] w-[392px] opacity-15 overflow-hidden pointer-events-none select-none">
+        <img alt="" className="w-full h-full object-cover" src="/assets/image9_1_6.png" />
+      </div>
 
       {/* Pill */}
       <div
