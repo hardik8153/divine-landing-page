@@ -14,30 +14,17 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
    */
   const imgLeft = imageLeft ? 0 : 896;
   const textLeft = imageLeft ? 620 : 0;
-  const numberLeft = imageLeft ? 0 : 896;
 
   const isGooglePlayBadge = image && image.includes("image13");
 
   return (
     <div className="absolute" style={{ top, left: 229, width: 1462, height: 720 }}>
-      {/* Large watermark step number */}
-      <p
-        className="absolute font-bold leading-[1] opacity-10 text-white pointer-events-none select-none"
-        style={{
-          left: numberLeft,
-          top: 0,
-          fontSize: 280,
-          width: 566,
-          textAlign: "center",
-        }}
-      >
-        {number}
-      </p>
-
       {/* Step image */}
       {image && (
         <div
-          className="absolute rounded-[24px] overflow-hidden flex items-center justify-center bg-[#100704] border border-[#8b5104]/30"
+          className={`absolute flex items-center justify-center ${
+            isGooglePlayBadge ? "" : "rounded-[24px] overflow-hidden bg-[#100704] border border-[#8b5104]/30"
+          }`}
           style={{
             left: imgLeft,
             top: 0,
@@ -47,33 +34,41 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
         >
           <img
             alt={tagline}
-            className="w-full h-full"
-            style={{
-              objectFit: isGooglePlayBadge ? "contain" : "cover",
-              padding: isGooglePlayBadge ? "64px" : "0",
-            }}
+            className={isGooglePlayBadge ? "w-[400px] h-auto object-contain" : "w-full h-full object-cover"}
             src={image}
+            style={isGooglePlayBadge ? { filter: "none" } : undefined}
           />
         </div>
       )}
 
       {/* Text content */}
       <div
-        className="absolute flex flex-col gap-[27px] items-start justify-center"
+        className="absolute flex flex-col gap-[27px] items-start justify-center pt-24"
         style={{ left: textLeft, top: 0, width: 555, height: 720 }}
       >
-        <div>
+        {/* Large step number watermark on the left top of the heading */}
+        <span
+          className="absolute font-extrabold text-[150px] text-white/10 leading-none pointer-events-none select-none"
+          style={{
+            left: 0,
+            top: 50,
+          }}
+        >
+          {number}
+        </span>
+
+        <div className="relative z-10">
           <p className="font-extrabold text-[18px] tracking-[6px] uppercase bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
             {tagline}
           </p>
           <div className="h-[2px] w-[72px] mt-[10px] bg-gradient-to-r from-[#fe9100] to-[#d92439]" />
         </div>
-        <p className="font-normal text-[48px] leading-[1.2] text-white">
+        <p className="font-normal text-[48px] leading-[1.2] text-white relative z-10">
           {headingPre} <span className="text-[#fe9100]">{headingHi}</span>
         </p>
         <a
           href="#chat"
-          className="flex items-center gap-3 font-bold text-[28px] bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent"
+          className="flex items-center gap-3 font-bold text-[28px] bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent relative z-10"
         >
           Get Started Now
           <img
@@ -106,26 +101,38 @@ export default function Steps({ isMobile }) {
 
         <div className="m-step-list">
           {/* Step 1 */}
-          <div className="m-step">
-            <span className="m-step-number">01</span>
-            <div className="m-step-img-wrap bg-[#100704] border border-[#8b5104]/30 flex items-center justify-center">
+          <div className="m-step" style={{ alignItems: "center" }}>
+            {/* Google Play badge - NOT in a container */}
+            <div
+              className="flex items-center justify-center"
+              style={{
+                width: "240px",
+                height: "auto",
+                minHeight: "120px",
+                marginTop: "30px",
+                background: "transparent",
+                border: "none",
+              }}
+            >
               <img
                 src={imgAppShowcase1}
                 alt="Get the App"
                 style={{
                   objectFit: "contain",
-                  padding: "24px",
-                  width: "100%",
-                  height: "100%",
+                  width: "200px",
+                  height: "auto",
                 }}
               />
             </div>
-            <div className="m-step-content">
-              <small>Get the App</small>
-              <h3>
+            <div className="m-step-content relative pt-16 w-[300px] text-left">
+              <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
+                01
+              </span>
+              <small className="relative z-10">Get the App</small>
+              <h3 className="relative z-10">
                 Download DivineTalk for free from <em>Google Play.</em>
               </h3>
-              <a href="#chat">
+              <a href="#chat" className="relative z-10">
                 Get Started Now
                 <img
                   alt=""
@@ -137,8 +144,7 @@ export default function Steps({ isMobile }) {
           </div>
 
           {/* Step 2 */}
-          <div className="m-step">
-            <span className="m-step-number">02</span>
+          <div className="m-step" style={{ alignItems: "center" }}>
             <div className="m-step-img-wrap bg-[#100704] border border-[#8b5104]/30 flex items-center justify-center">
               <img
                 src={imgAppShowcase2}
@@ -150,13 +156,16 @@ export default function Steps({ isMobile }) {
                 }}
               />
             </div>
-            <div className="m-step-content">
-              <small>Log In Securely</small>
-              <h3>
+            <div className="m-step-content relative pt-16 w-[300px] text-left">
+              <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
+                02
+              </span>
+              <small className="relative z-10">Log In Securely</small>
+              <h3 className="relative z-10">
                 Simply enter your mobile number and verify it instantly with a{" "}
                 <em>secure OTP.</em>
               </h3>
-              <a href="#chat">
+              <a href="#chat" className="relative z-10">
                 Get Started Now
                 <img
                   alt=""
@@ -168,8 +177,7 @@ export default function Steps({ isMobile }) {
           </div>
 
           {/* Step 3 */}
-          <div className="m-step">
-            <span className="m-step-number">03</span>
+          <div className="m-step" style={{ alignItems: "center" }}>
             <div className="m-step-img-wrap bg-[#100704] border border-[#8b5104]/30 flex items-center justify-center">
               <img
                 src={imgAstrologer1}
@@ -181,13 +189,16 @@ export default function Steps({ isMobile }) {
                 }}
               />
             </div>
-            <div className="m-step-content">
-              <small>Start Talking</small>
-              <h3>
+            <div className="m-step-content relative pt-16 w-[300px] text-left">
+              <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
+                03
+              </span>
+              <small className="relative z-10">Start Talking</small>
+              <h3 className="relative z-10">
                 Choose your preferred Astrologer, and begin your{" "}
                 <em>first free consultation.</em>
               </h3>
-              <a href="#chat">
+              <a href="#chat" className="relative z-10">
                 Get Started Now
                 <img
                   alt=""

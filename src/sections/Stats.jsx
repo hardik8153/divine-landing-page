@@ -2,6 +2,7 @@ const imgVectorSmartObject2 = "/assets/image6_1_6.png";
 const imgAsset34X1 = "/assets/image7_1_6.png";
 const imgAsset44X1 = "/assets/image8_1_6.png";
 const imgRating = "/assets/image9_1_6.png";
+const imgPhoneMockup = "/assets/image11_1_6.png";
 
 const imgAvatarRahul = "/assets/image12_1_6.png";
 const imgAvatarPriya = "/assets/image2_1_6.png";
@@ -155,6 +156,11 @@ export default function Stats({ isMobile }) {
         textH={120}
         avatar={imgAvatarVikram}
       />
+
+      {/* Center Phone Mockup */}
+      <div className="absolute overflow-hidden flex items-center justify-center pointer-events-none select-none" style={{ left: 710, top: 2950, width: 500, height: 960 }}>
+        <img alt="" className="w-full h-full object-contain" src={imgPhoneMockup} />
+      </div>
 
       <div className="absolute h-0 left-[222px] top-[3972px] w-[1476px] border-t border-white/15" data-node-id="1:108" />
     </div>
