@@ -22,7 +22,7 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
       {/* Step image */}
       {image && (
         <div
-          className={`absolute flex items-center justify-center ${
+          className={`absolute flex items-center justify-center relative ${
             isGooglePlayBadge ? "" : "rounded-[24px] overflow-hidden bg-[#100704] border border-[#8b5104]/30"
           }`}
           style={{
@@ -32,9 +32,23 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
             height: 720,
           }}
         >
+          {/* image9_1_6.png behind the Google Play button */}
+          {isGooglePlayBadge && (
+            <img
+              src="/assets/image9_1_6.png"
+              className="absolute w-[440px] h-[440px] opacity-20 object-contain pointer-events-none select-none z-0"
+              style={{
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+              }}
+              alt=""
+            />
+          )}
+
           <img
             alt={tagline}
-            className={isGooglePlayBadge ? "w-[400px] h-auto object-contain" : "w-full h-full object-cover"}
+            className={isGooglePlayBadge ? "w-[400px] h-auto object-contain relative z-10" : "w-full h-full object-cover"}
             src={image}
             style={isGooglePlayBadge ? { filter: "none" } : undefined}
           />
@@ -94,37 +108,23 @@ export default function Steps({ isMobile }) {
             className="w-[14px] h-[14px] inline-block mr-2 align-middle"
             alt=""
           />
-          <span className="align-middle">Not Sure Where to Start? We Got You</span>
+          <span className="align-middle">
+            Not Sure Where to Start? We Got You
+          </span>
         </div>
 
-        <h2>Simple Steps to Start Your Journey</h2>
+        <h2>
+          Simple Steps to Start Your{" "}
+          <span className="bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent font-bold">
+            Journey
+          </span>
+        </h2>
 
         <div className="m-step-list">
           {/* Step 1 */}
           <div className="m-step" style={{ alignItems: "center" }}>
-            {/* Google Play badge - NOT in a container */}
-            <div
-              className="flex items-center justify-center"
-              style={{
-                width: "240px",
-                height: "auto",
-                minHeight: "120px",
-                marginTop: "30px",
-                background: "transparent",
-                border: "none",
-              }}
-            >
-              <img
-                src={imgAppShowcase1}
-                alt="Get the App"
-                style={{
-                  objectFit: "contain",
-                  width: "200px",
-                  height: "auto",
-                }}
-              />
-            </div>
-            <div className="m-step-content relative pt-16 w-[300px] text-left">
+            {/* 1. Number, heading and sub heading */}
+            <div className="m-step-content relative pt-16 w-[300px] text-left flex flex-col items-start">
               <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
                 01
               </span>
@@ -132,11 +132,47 @@ export default function Steps({ isMobile }) {
               <h3 className="relative z-10">
                 Download DivineTalk for free from <em>Google Play.</em>
               </h3>
-              <a href="#chat" className="relative z-10">
+            </div>
+
+            {/* 2. Image (Google Play badge - NOT in a container, with image9 in bg) */}
+            <div
+              className="flex items-center justify-center relative mt-6"
+              style={{
+                width: "240px",
+                height: "auto",
+                minHeight: "150px",
+                background: "transparent",
+                border: "none",
+              }}
+            >
+              <img
+                src="/assets/image9_1_6.png"
+                className="absolute w-[160px] h-[160px] opacity-20 object-contain pointer-events-none select-none z-0"
+                alt=""
+              />
+              <img
+                src={imgAppShowcase1}
+                alt="Get the App"
+                style={{
+                  objectFit: "contain",
+                  width: "200px",
+                  height: "auto",
+                  position: "relative",
+                  zIndex: 10,
+                }}
+              />
+            </div>
+
+            {/* 3. CTA */}
+            <div className="w-[300px] text-left mt-4 mb-8">
+              <a
+                href="#chat"
+                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
+              >
                 Get Started Now
                 <img
                   alt=""
-                  className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]"
+                  className="w-[10px] h-[6px] -rotate-90 inline-block"
                   src={imgArrowDown}
                 />
               </a>
@@ -145,7 +181,20 @@ export default function Steps({ isMobile }) {
 
           {/* Step 2 */}
           <div className="m-step" style={{ alignItems: "center" }}>
-            <div className="m-step-img-wrap bg-[#100704] border border-[#8b5104]/30 flex items-center justify-center">
+            {/* 1. Number, heading and sub heading */}
+            <div className="m-step-content relative pt-16 w-[300px] text-left flex flex-col items-start">
+              <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
+                02
+              </span>
+              <small className="relative z-10">Log In Securely</small>
+              <h3 className="relative z-10">
+                Simply enter your mobile number and verify it instantly with a{" "}
+                <em>secure OTP.</em>
+              </h3>
+            </div>
+
+            {/* 2. Image */}
+            <div className="m-step-img-wrap bg-[#100704] border border-[#8b5104]/30 flex items-center justify-center mt-6">
               <img
                 src={imgAppShowcase2}
                 alt="Log In Securely"
@@ -156,20 +205,17 @@ export default function Steps({ isMobile }) {
                 }}
               />
             </div>
-            <div className="m-step-content relative pt-16 w-[300px] text-left">
-              <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
-                02
-              </span>
-              <small className="relative z-10">Log In Securely</small>
-              <h3 className="relative z-10">
-                Simply enter your mobile number and verify it instantly with a{" "}
-                <em>secure OTP.</em>
-              </h3>
-              <a href="#chat" className="relative z-10">
+
+            {/* 3. CTA */}
+            <div className="w-[300px] text-left mt-4 mb-8">
+              <a
+                href="#chat"
+                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
+              >
                 Get Started Now
                 <img
                   alt=""
-                  className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]"
+                  className="w-[10px] h-[6px] -rotate-90 inline-block"
                   src={imgArrowDown}
                 />
               </a>
@@ -178,7 +224,20 @@ export default function Steps({ isMobile }) {
 
           {/* Step 3 */}
           <div className="m-step" style={{ alignItems: "center" }}>
-            <div className="m-step-img-wrap bg-[#100704] border border-[#8b5104]/30 flex items-center justify-center">
+            {/* 1. Number, heading and sub heading */}
+            <div className="m-step-content relative pt-16 w-[300px] text-left flex flex-col items-start">
+              <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
+                03
+              </span>
+              <small className="relative z-10">Start Talking</small>
+              <h3 className="relative z-10">
+                Choose your preferred Astrologer, and begin your{" "}
+                <em>first free consultation.</em>
+              </h3>
+            </div>
+
+            {/* 2. Image */}
+            <div className="m-step-img-wrap bg-[#100704] border border-[#8b5104]/30 flex items-center justify-center mt-6">
               <img
                 src={imgAstrologer1}
                 alt="Start Talking"
@@ -189,20 +248,17 @@ export default function Steps({ isMobile }) {
                 }}
               />
             </div>
-            <div className="m-step-content relative pt-16 w-[300px] text-left">
-              <span className="absolute left-0 top-0 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
-                03
-              </span>
-              <small className="relative z-10">Start Talking</small>
-              <h3 className="relative z-10">
-                Choose your preferred Astrologer, and begin your{" "}
-                <em>first free consultation.</em>
-              </h3>
-              <a href="#chat" className="relative z-10">
+
+            {/* 3. CTA */}
+            <div className="w-[300px] text-left mt-4 mb-8">
+              <a
+                href="#chat"
+                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
+              >
                 Get Started Now
                 <img
                   alt=""
-                  className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]"
+                  className="w-[10px] h-[6px] -rotate-90 inline-block"
                   src={imgArrowDown}
                 />
               </a>
@@ -231,12 +287,15 @@ export default function Steps({ isMobile }) {
         </span>
       </div>
 
-      {/* Section Heading */}
+      {/* Section Heading with multi-color gradient */}
       <p
         className="absolute font-extrabold leading-[normal] left-[222px] text-[56px] text-center text-white top-[4248px] w-[1476px]"
         data-node-id="1:123"
       >
-        Simple Steps to Start Your Journey
+        Simple Steps to{" "}
+        <span className="bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
+          Start Your Journey
+        </span>
       </p>
 
       {/* Step 1: Image Right */}
