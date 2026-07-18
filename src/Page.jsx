@@ -22,7 +22,7 @@ export default function Page() {
 
   if (isMobile) {
     return (
-      <div className="mobile-page w-full min-h-screen bg-[#020001] text-white">
+      <div className="mobile-page max-w-[428px] mx-auto min-h-screen bg-[#020001] text-white relative">
         <style>{`
           #root > div {
             height: auto !important;
@@ -34,14 +34,10 @@ export default function Page() {
         `}</style>
         <HeroSection isMobile={true} />
         <Features isMobile={true} />
-        
-        {/* Temporarily hide other sections on mobile to prevent desktop absolute coordinates from overflowing the viewport */}
-        <div className="hidden">
-          <Stats isMobile={true} />
-          <Steps isMobile={true} />
-          <CTA isMobile={true} />
-          <Footer isMobile={true} />
-        </div>
+        <Stats isMobile={true} />
+        <Steps isMobile={true} />
+        <CTA isMobile={true} />
+        <Footer isMobile={true} />
       </div>
     );
   }

@@ -3,7 +3,7 @@ const imgArrowDown = "/assets/arrow.png";
 const imgAstroIcon1 = "/assets/image8_1_6.png";
 const imgAstroIcon2 = "/assets/image9_1_6.png";
 const imgAstroIcon3 = "/assets/image10_1_6.png";
-const imgTrophy = "/assets/image13_1_6.png";
+const imgTrophy = "/assets/image8_1_6.png";
 
 function FeatureCard({ left, top, highlighted, title, desc, img }) {
   return (

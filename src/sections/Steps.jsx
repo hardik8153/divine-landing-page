@@ -41,7 +41,71 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
 }
 
 // 1:1 port of Figma nodes 1:123 heading + 1:205 / 1:216 / 1:227 "Content" steps
-export default function Steps() {
+export default function Steps({ isMobile }) {
+  if (isMobile) {
+    return (
+      <section className="m-steps" id="steps">
+        <div className="m-pill">
+          <img src={imgQuestion} className="w-[14px] h-[14px] inline-block mr-2 align-middle" alt="" />
+          <span className="align-middle">Not Sure Where to Start? We Got You</span>
+        </div>
+
+        <h2>Simple Steps to Start Your Journey</h2>
+
+        <div className="m-step-list flex flex-col gap-[48px]">
+          {/* Step 1 */}
+          <div className="m-step">
+            <span>01</span>
+            <img src={imgAppShowcase1} alt="Get the App" />
+            <div>
+              <small>Get the App</small>
+              <h3>
+                Download DivineTalk for free from <em>Google Play.</em>
+              </h3>
+              <a href="#chat">
+                Get Started Now
+                <img alt="" className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]" src={imgArrowDown} />
+              </a>
+            </div>
+          </div>
+
+          {/* Step 2 (Flipped) */}
+          <div className="m-step flip">
+            <span>02</span>
+            <img src={imgAppShowcase2} alt="Log In Securely" />
+            <div>
+              <small>Log In Securely</small>
+              <h3>
+                Simply enter your mobile number and verify it instantly with a <em>secure OTP.</em>
+              </h3>
+              <a href="#chat">
+                Get Started Now
+                <img alt="" className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]" src={imgArrowDown} />
+              </a>
+            </div>
+          </div>
+
+          {/* Step 3 */}
+          <div className="m-step">
+            <span>03</span>
+            <img src={imgAstrologer1} alt="Start Talking" />
+            <div>
+              <small>Start Talking</small>
+              <h3>
+                Choose your preferred Astrologer, and begin your <em>first free consultation.</em>
+              </h3>
+              <a href="#chat">
+                Get Started Now
+                <img alt="" className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]" src={imgArrowDown} />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop Layout
   return (
     <div className="contents" data-node-id="steps">
       <div className="absolute h-[2992px] left-0 top-[3972px] w-[1920px] bg-gradient-to-b from-black via-[#150502] to-black -z-10" />
