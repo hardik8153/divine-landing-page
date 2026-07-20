@@ -148,7 +148,7 @@ export default function Features({ isMobile }) {
   return (
     <div className="contents" data-node-id="1:34">
       <div className="absolute h-305.75 left-105.75 top-[1810px] w-273.5 rounded-full bg-[#3a1a05] opacity-40 blur-[80px]" />
-      <div className="absolute h-152.25 left-[1551px] top-288.25 w-133.75opacity-20 overflow-hidden -rotate-45">
+      <div className="absolute h-152.25 -right-40 top-288.25 w-133.75 opacity-20 overflow-hidden -rotate-45">
         <img alt="" className="w-full h-full object-cover" src={imgCancer4X1} />
       </div>
 

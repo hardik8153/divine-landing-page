@@ -309,11 +309,11 @@ export default function Steps({ isMobile }) {
 
   // Desktop Layout
   return (
-    <div className="contents" data-node-id="steps">
+    <div className="contents relative" data-node-id="steps">
       <div className="absolute h-[2992px] left-0 top-[3972px] w-[1920px] bg-linear-to-b from-black via-[#150502] to-black -z-10" />
 
       {/* Decorative background image9_1_6.png on top right corner absolute */}
-      <div className="absolute h-104 left-[1666px] top-[4074px] w-98 opacity-15 overflow-hidden pointer-events-none select-none">
+      <div className="absolute h-139.5 -right-50 top-[4374px] w-158 opacity-15 overflow-hidden pointer-events-none select-none">
         <img
           alt=""
           className="w-full h-full object-cover"
