@@ -158,7 +158,7 @@ export default function Features({ isMobile }) {
       />
 
       <p
-        className="absolute font-normal left-[390px]text-[72px] text-center text-white top-340 w-280.5 capitalize"
+        className="absolute font-normal left-97.5 text-[72px] text-center text-white top-340 w-280.5 capitalize"
         data-node-id="1:41"
       >
         Experience Our{" "}
