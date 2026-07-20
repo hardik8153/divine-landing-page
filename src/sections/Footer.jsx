@@ -85,7 +85,7 @@ export default function Footer({ isMobile }) {
       data-node-id="1:253"
     >
       <div className="flex items-start justify-between w-full">
-        <div className="flex flex-col gap-6 items-start w-[213px]">
+        <div className="flex flex-col gap-6 items-start w-53.25">
           <img
             alt="DivineTalk"
             className="h-16 w-auto object-contain"
@@ -97,7 +97,7 @@ export default function Footer({ isMobile }) {
           </p>
         </div>
 
-        <div className="flex flex-col gap-4 items-start text-white w-[83px]">
+        <div className="flex flex-col gap-4 items-start text-white w-20.75">
           <p className="font-semibold text-[16px]">Browse</p>
           <div className="flex flex-col gap-2 text-[12px]">
             <a href="#home">Home</a>
@@ -108,7 +108,7 @@ export default function Footer({ isMobile }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 items-start text-white w-[191px]">
+        <div className="flex flex-col gap-4 items-start text-white w-47.75">
           <p className="font-semibold text-[16px]">Support</p>
           <div className="flex flex-col gap-2 text-[12px]">
             <a href="#faqs">Faqs</a>
@@ -118,7 +118,7 @@ export default function Footer({ isMobile }) {
           </div>
         </div>
 
-        <div className="flex flex-col gap-4 items-start text-white w-[283px]">
+        <div className="flex flex-col gap-4 items-start text-white w-70.75">
           <p className="font-semibold text-[16px]">Get in Touch</p>
           <p className="text-[12px]">
             You are always welcome to contact us if you have any queries

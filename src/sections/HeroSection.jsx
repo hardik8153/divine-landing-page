@@ -11,7 +11,7 @@ export default function HeroSection({ isMobile }) {
   if (isMobile) {
     return (
       <div
-        className="m-hero relative w-full h-[900px] px-[32px] pt-[30px] flex flex-col items-center overflow-hidden"
+        className="m-hero relative w-full h-225 px-8 pt-7.5 flex flex-col items-center overflow-hidden"
         data-node-id="782-244"
       >
         {/* Navigation Bar */}
@@ -60,21 +60,21 @@ export default function HeroSection({ isMobile }) {
           <div className="flex -space-x-2.5">
             <img
               src={imgEllipse1728}
-              className="w-[24px] h-[24px] rounded-full border border-black"
+              className="w-6 h-6 rounded-full border border-black"
               alt=""
             />
             <img
               src={imgEllipse1729}
-              className="w-[24px] h-[24px] rounded-full border border-black"
+              className="w-6 h-6 rounded-full border border-black"
               alt=""
             />
             <img
               src={imgEllipse1730}
-              className="w-[24px] h-[24px] rounded-full border border-black"
+              className="w-6 h-6 rounded-full border border-black"
               alt=""
             />
           </div>
-          <img src={imgHeart} className="w-[16px] h-[16px]" alt="" />
+          <img src={imgHeart} className="w-4 h-4" alt="" />
           <span className="text-white text-[11px] font-medium">
             3 Crore+ Users Trusts Divinetalk
           </span>
@@ -86,67 +86,166 @@ export default function HeroSection({ isMobile }) {
   // Desktop layout
   return (
     <div className="contents" data-node-id="1:7">
-      <div className="absolute h-[1080px] left-0 top-0 w-[1920px]" data-node-id="1:8">
-        <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgBgLanding1} />
+      <div
+        className="absolute h-270 left-0 top-0 w-[1920px]"
+        data-node-id="1:8"
+      >
+        <img
+          alt=""
+          className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+          src={imgBgLanding1}
+        />
       </div>
 
-      <div className="absolute font-['Gilroy-ExtraBold','Poppins',sans-serif] leading-[0] left-[164px] top-[289px] w-[786px]" data-node-id="1:9">
-        <p className="leading-[90px] mb-0 text-[72px] text-white font-extrabold">Your Answers Are</p>
-        <p className="leading-[90px] text-[#fe9100] text-[72px] font-extrabold">Just A Tap Away!</p>
+      <div
+        className="absolute font-['Gilroy-ExtraBold','Poppins',sans-serif] leading-0 left-41 top-72.25 w-196.5"
+        data-node-id="1:9"
+      >
+        <p className="leading-22.5 mb-0 text-[72px] text-white font-extrabold">
+          Your Answers Are
+        </p>
+        <p className="leading-22.5 text-[#fe9100] text-[72px] font-extrabold">
+          Just A Tap Away!
+        </p>
       </div>
 
-      <div className="absolute h-[64px] left-[164px] top-[94px] w-[239px]" data-node-id="1:10">
-        <img alt="DivineTalk" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgLightLogo4X1} />
+      <div
+        className="absolute h-16 left-41 top-23.5 w-59.75"
+        data-node-id="1:10"
+      >
+        <img
+          alt="DivineTalk"
+          className="absolute inset-0 max-w-none object-cover pointer-events-none size-full"
+          src={imgLightLogo4X1}
+        />
       </div>
 
-      <div className="absolute contents left-[1534px] top-[95px]" data-node-id="1:11">
-        <a href="#chat" className="absolute bg-gradient-to-r from-[#fe9100] h-[62px] left-[1534px] rounded-[36px] to-[#d92439] top-[95px] w-[222px] flex items-center justify-center" data-node-id="1:12">
-          <span className="font-bold text-[24px] text-white whitespace-nowrap">Get Free Chat</span>
+      <div
+        className="absolute contents left-383.5 top-23.75"
+        data-node-id="1:11"
+      >
+        <a
+          href="#chat"
+          className="absolute bg-linear-to-r from-[#fe9100] h-15.5 left-383.5 rounded-[36px] to-[#d92439] top-23.75 w-55.5 flex items-center justify-center"
+          data-node-id="1:12"
+        >
+          <span className="font-bold text-[24px] text-white whitespace-nowrap">
+            Get Free Chat
+          </span>
         </a>
       </div>
 
-      <div className="absolute contents left-[809px] top-[113px]" data-node-id="1:14">
-        <a href="#features" className="absolute font-normal leading-[normal] left-[927px] text-[20px] text-white top-[113px] whitespace-nowrap" data-node-id="1:15">
+      <div
+        className="absolute contents left-202.25 top-28.25"
+        data-node-id="1:14"
+      >
+        <a
+          href="#features"
+          className="absolute font-normal leading-[normal] left-231.75 text-[20px] text-white top-28.25 whitespace-nowrap"
+          data-node-id="1:15"
+        >
           Our Features
         </a>
-        <a href="#download" className="absolute font-normal leading-[normal] left-[1110px] text-[20px] text-white top-[113px] whitespace-nowrap" data-node-id="1:16">
+        <a
+          href="#download"
+          className="absolute font-normal leading-[normal] left-277.5 text-[20px] text-white top-28.25 whitespace-nowrap"
+          data-node-id="1:16"
+        >
           Download Our App
         </a>
-        <a href="#home" className="absolute font-bold leading-[normal] left-[809px] text-[20px] text-[#fe9100] top-[113px]" data-node-id="1:17">
+        <a
+          href="#home"
+          className="absolute font-bold leading-[normal] left-202.25 text-[20px] text-[#fe9100] top-28.25"
+          data-node-id="1:17"
+        >
           Home
         </a>
       </div>
 
-      <div className="absolute contents left-[164px] top-[652px]" data-node-id="1:18">
-        <p className="absolute font-normal leading-[normal] left-[503px] text-[24px] text-white top-[673px] whitespace-nowrap" data-node-id="1:19">
+      <div
+        className="absolute contents left-41 top-163"
+        data-node-id="1:18"
+      >
+        <p
+          className="absolute font-normal leading-[normal] left-125.75 text-[24px] text-white top-168.25 whitespace-nowrap"
+          data-node-id="1:19"
+        >
           Scroll Down To Know More
         </p>
-        <div className="absolute h-[24px] left-[829px] top-[680px] w-[16px]" data-node-id="1:20">
-          <img alt="" className="block max-w-none mr-5 size-full" src={imgArrowDown} />
+        <div
+          className="absolute h-6 left-207.25 top-170 w-4"
+          data-node-id="1:20"
+        >
+          <img
+            alt=""
+            className="block max-w-none mr-5 size-full"
+            src={imgArrowDown}
+          />
         </div>
-        <a href="#chat" className="absolute contents left-[164px] top-[652px]" data-node-id="1:21">
-          <div className="absolute bg-gradient-to-r from-[#fe9100] h-[72px] left-[164px] rounded-[36px] to-[#d92439] top-[652px] w-[307px] flex items-center" data-node-id="1:22">
-            <span className="font-bold text-[32px] text-white whitespace-nowrap absolute left-[48px]">Get Free Chat</span>
+        <a
+          href="#chat"
+          className="absolute contents left-41 top-163"
+          data-node-id="1:21"
+        >
+          <div
+            className="absolute bg-linear-to-r from-[#fe9100] h-18 left-41 rounded-[36px] to-[#d92439] top-163 w-76.75 flex items-center"
+            data-node-id="1:22"
+          >
+            <span className="font-bold text-[32px] text-white whitespace-nowrap absolute left-12">
+              Get Free Chat
+            </span>
           </div>
         </a>
       </div>
 
-      <p className="absolute font-normal leading-[normal] left-[164px] text-[#939393] text-[24px] top-[501px] w-[824px]" data-node-id="1:24">
-        Get personalized guidance, deep insights, and expert advice anytime, anywhere. Download the DivineTalk app today and take the first step toward clarity.
+      <p
+        className="absolute font-normal leading-[normal] left-41 text-[#939393] text-[24px] top-125.25 w-206"
+        data-node-id="1:24"
+      >
+        Get personalized guidance, deep insights, and expert advice anytime,
+        anywhere. Download the DivineTalk app today and take the first step
+        toward clarity.
       </p>
 
-      <div className="absolute contents left-[164px] top-[788px]" data-node-id="1:25">
-        <div className="absolute bg-black border-[0.5px] border-[rgba(255,255,255,0.5)] border-solid h-[64px] left-[164px] rounded-[40px] top-[788px] w-[590px]" data-node-id="1:26" />
-        <div className="absolute left-[308px] size-[32px] top-[804px]" data-node-id="1:27">
+      <div
+        className="absolute contents left-41 top-197"
+        data-node-id="1:25"
+      >
+        <div
+          className="absolute bg-black border-[0.5px] border-[rgba(255,255,255,0.5)] border-solid h-16 left-41 rounded-[40px] top-197 w-147.5"
+          data-node-id="1:26"
+        />
+        <div
+          className="absolute left-77 size-8 top-201"
+          data-node-id="1:27"
+        >
           <img alt="" className="block max-w-none size-full" src={imgHeart} />
         </div>
-        <img alt="" className="absolute left-[172px] size-[48px] top-[796px] rounded-full" src={imgEllipse1728} />
-        <img alt="" className="absolute left-[206px] size-[48px] top-[796px] rounded-full" src={imgEllipse1729} />
-        <img alt="" className="absolute left-[240px] size-[48px] top-[796px] rounded-full" src={imgEllipse1730} />
-        <p className="absolute font-normal leading-[normal] left-[360px] text-[24px] text-white top-[805px] whitespace-pre" data-node-id="1:32">{`3 Crore+ Users Trusts Divinetalk  `}</p>
+        <img
+          alt=""
+          className="absolute left-43 size-12 top-199 rounded-full"
+          src={imgEllipse1728}
+        />
+        <img
+          alt=""
+          className="absolute left-51.5 size-12 top-199 rounded-full"
+          src={imgEllipse1729}
+        />
+        <img
+          alt=""
+          className="absolute left-60 size-12 top-199 rounded-full"
+          src={imgEllipse1730}
+        />
+        <p
+          className="absolute font-normal leading-[normal] left-90 text-[24px] text-white top-201.25 whitespace-pre"
+          data-node-id="1:32"
+        >{`3 Crore+ Users Trusts Divinetalk  `}</p>
       </div>
 
-      <div className="absolute left-[222px] top-[1080px] w-[1476px] border-t border-white/15" data-node-id="1:33" />
+      <div
+        className="absolute left-55.5 top-270 w-369 border-t border-white/15"
+        data-node-id="1:33"
+      />
     </div>
   );
 }
