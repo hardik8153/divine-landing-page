@@ -1,7 +1,7 @@
 const imgVectorSmartObject2 = "/assets/image6_1_6.png";
 const imgAsset34X1 = "/assets/image7_1_6.png";
 const imgAsset44X1 = "/assets/image8_1_6.png";
-const imgRating = "/assets/image9_1_6.png";
+const imgRating = "/assets/rating.png";
 const imgPhoneMockup = "/assets/image11_1_6.png";
 
 const imgAvatarRahul = "/assets/image12_1_6.png";
@@ -36,16 +36,24 @@ export default function Stats({ isMobile }) {
     return (
       <section className="m-stories" id="stats">
         <div className="m-pill">
-          <img src={imgRating} className="w-[14px] h-[14px] inline-block mr-2 align-middle" alt="" />
-          <span className="align-middle">Success Stories  |  Hear from our community  &gt;</span>
+          <img
+            src={imgRating}
+            className="w-[14px] h-[14px] inline-block mr-2 align-middle"
+            alt=""
+          />
+          <span className="align-middle">
+            Success Stories | Hear from our community &gt;
+          </span>
         </div>
 
         <h2>
-          Empowering thousands with precise readings and life-altering advice.
+          Empowering thousands with <em>Precise Readings</em> And{" "}
+          <em>Life-Altering</em>
         </h2>
 
         <p className="m-lead">
-          See how our expert astrologers are helping people find true direction and peace of mind every single day.
+          See how our expert astrologers are helping people find true direction
+          and peace of mind every single day.
         </p>
 
         <div className="m-review-list">
@@ -55,7 +63,8 @@ export default function Stats({ isMobile }) {
             <h3>Rahul</h3>
             <b>★★★★★</b>
             <p>
-              Is app ki wajah se main khud ko aur deeply samajh paaya hoon. Meri personalized readings bilkul spot on thi!
+              Is app ki wajah se main khud ko aur deeply samajh paaya hoon. Meri
+              personalized readings bilkul spot on thi!
             </p>
           </div>
 
@@ -65,7 +74,8 @@ export default function Stats({ isMobile }) {
             <h3>Anjali</h3>
             <b>★★★★★</b>
             <p>
-              Daily horoscopes aur insights ne mujhe life mein better decisions lene mein bahut help ki hai. Yeh app sach mein amazing hai!
+              Daily horoscopes aur insights ne mujhe life mein better decisions
+              lene mein bahut help ki hai. Yeh app sach mein amazing hai!
             </p>
           </div>
 
@@ -75,7 +85,8 @@ export default function Stats({ isMobile }) {
             <h3>Priya</h3>
             <b>★★★★★</b>
             <p>
-              Yahan ki guidance se mujhe apne future aur relationships ko lekar kaafi clarity mili hai. Experts ki advice bahut trustworthy hai.
+              Yahan ki guidance se mujhe apne future aur relationships ko lekar
+              kaafi clarity mili hai. Experts ki advice bahut trustworthy hai.
             </p>
           </div>
 
@@ -85,7 +96,8 @@ export default function Stats({ isMobile }) {
             <h3>Vikram</h3>
             <b>★★★★★</b>
             <p>
-              Pehli baar kisi astrology app par itna trust hua hai. Yahan ke astrologers jo batate hain, wo ekdum sach aur accurate hota hai.
+              Pehli baar kisi astrology app par itna trust hua hai. Yahan ke
+              astrologers jo batate hain, wo ekdum sach aur accurate hota hai.
             </p>
           </div>
         </div>
@@ -98,7 +110,11 @@ export default function Stats({ isMobile }) {
     <div className="contents" data-node-id="stats">
       {/* decorative background */}
       <div className="absolute h-[637px] left-[363px] top-[2416px] w-[1195px] opacity-20 overflow-hidden">
-        <img alt="" className="w-full h-full object-cover" src={imgVectorSmartObject2} />
+        <img
+          alt=""
+          className="w-full h-full object-cover"
+          src={imgVectorSmartObject2}
+        />
       </div>
       <div className="absolute h-[762px] left-[-176px] top-[3395px] w-[713px] opacity-20 overflow-hidden rotate-[22deg]">
         <img alt="" className="w-full h-full object-cover" src={imgAsset34X1} />
@@ -107,17 +123,36 @@ export default function Stats({ isMobile }) {
         <img alt="" className="w-full h-full object-cover" src={imgAsset44X1} />
       </div>
 
-      <div className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[658px] rounded-[40px] top-[2470px] w-[603px] flex items-center gap-3 px-8" data-node-id="1:118">
-        <img alt="" className="size-[32px]" src={imgRating} />
-        <span className="font-normal text-[24px] text-white whitespace-pre">{`Success Stories | Hear from our community  >`}</span>
+      <div
+        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[658px] rounded-[40px] top-[2470px] w-[633px] flex items-center gap-3 px-8"
+        data-node-id="1:118"
+      >
+        <img alt="" className="size-8" src={imgRating} />
+        <span className="font-normal text-[24px] text-white whitespace-pre">{`Success Stories | Hear from our community >`}</span>
       </div>
 
-      <p className="absolute font-extrabold leading-[90px] left-[222px] text-[64px] text-white top-[2582px] w-[1476px]" data-node-id="1:116">
-        Empowering thousands with precise readings and life-altering advice.
+      {/* <p
+        className="absolute font-extrabold leading-[90px] left-[222px] text-[64px] text-white top-[2582px] w-[1476px]"
+        data-node-id="1:116"
+      >
+        Empowering thousands with <em>precise readings</em> and life-altering
+        advice.
+      </p> */}
+      <p
+        className="absolute font-normal left-55.5 text-[72px] text-center text-white top-[2582px] w-369 capitalize"
+        data-node-id="1:116"
+      >
+        Empowering thousands with{" "}
+        <span className="text-[#fe9100]">precise readings </span> and
+        <span className="text-[#fe9100]"> Life-altering advice.</span>
       </p>
 
-      <p className="absolute font-normal leading-[normal] left-[497px] text-[#939393] text-[24px] text-center top-[2810px] w-[943px]" data-node-id="1:117">
-        See how our expert astrologers are helping people find true direction and peace of mind every single day.
+      <p
+        className="absolute font-normal leading-[normal] left-[497px] text-[#939393] text-[24px] text-center top-[2810px] w-[943px]"
+        data-node-id="1:117"
+      >
+        See how our expert astrologers are helping people find true direction
+        and peace of mind every single day.
       </p>
 
       <TestimonialCard
@@ -158,11 +193,21 @@ export default function Stats({ isMobile }) {
       />
 
       {/* Center Phone Mockup */}
-      <div className="absolute overflow-hidden flex items-center justify-center pointer-events-none select-none" style={{ left: 710, top: 2950, width: 500, height: 960 }}>
-        <img alt="" className="w-full h-full object-contain" src={imgPhoneMockup} />
+      <div
+        className="absolute overflow-hidden flex items-center justify-center pointer-events-none select-none"
+        style={{ left: 710, top: 2950, width: 500, height: 960 }}
+      >
+        <img
+          alt=""
+          className="w-full h-full object-contain"
+          src={imgPhoneMockup}
+        />
       </div>
 
-      <div className="absolute h-0 left-[222px] top-[3972px] w-[1476px] border-t border-white/15" data-node-id="1:108" />
+      <div
+        className="absolute h-0 left-[222px] top-[3972px] w-[1476px] border-t border-white/15"
+        data-node-id="1:108"
+      />
     </div>
   );
 }

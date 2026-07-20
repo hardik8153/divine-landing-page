@@ -36,9 +36,9 @@ export default function HeroSection({ isMobile }) {
         </div>
 
         {/* Scroll link */}
-        <div className="mt-[26px] flex items-center justify-center gap-[6px] z-10">
+        <div className="mt-[26px] flex items-center justify-center gap-[5px] z-10">
           <span className="text-[12px] font-normal text-white">Scroll Down To Know More</span>
-          <span className="text-[#fe9100] font-bold text-[14px]">↓</span>
+          <span className="text-[#fe9100] font-bold text-[12px]">↓</span>
         </div>
 
         {/* Social Proof Capsule */}
@@ -93,7 +93,7 @@ export default function HeroSection({ isMobile }) {
         <p className="absolute font-normal leading-[normal] left-[503px] text-[24px] text-white top-[673px] whitespace-nowrap" data-node-id="1:19">
           Scroll Down To Know More
         </p>
-        <div className="absolute h-[24px] left-[809px] top-[676px] w-[16px]" data-node-id="1:20">
+        <div className="absolute h-[24px] left-[829px] top-[680px] w-[16px]" data-node-id="1:20">
           <img alt="" className="block max-w-none mr-5 size-full" src={imgArrowDown} />
         </div>
         <a href="#chat" className="absolute contents left-[164px] top-[652px]" data-node-id="1:21">
@@ -108,7 +108,7 @@ export default function HeroSection({ isMobile }) {
       </p>
 
       <div className="absolute contents left-[164px] top-[788px]" data-node-id="1:25">
-        <div className="absolute bg-black border-[0.5px] border-[rgba(255,255,255,0.5)] border-solid h-[64px] left-[164px] rounded-[40px] top-[788px] w-[565px]" data-node-id="1:26" />
+        <div className="absolute bg-black border-[0.5px] border-[rgba(255,255,255,0.5)] border-solid h-[64px] left-[164px] rounded-[40px] top-[788px] w-[590px]" data-node-id="1:26" />
         <div className="absolute left-[308px] size-[32px] top-[804px]" data-node-id="1:27">
           <img alt="" className="block max-w-none size-full" src={imgHeart} />
         </div>

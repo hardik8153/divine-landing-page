@@ -2,7 +2,7 @@ const imgArrowDown = "/assets/arrow.png";
 const imgAppShowcase1 = "/assets/image13_1_6.png";
 const imgAppShowcase2 = "/assets/image14_1_6.png";
 const imgAstrologer1 = "/assets/image15_1_6.png";
-const imgQuestion = "/assets/image8_1_6.png";
+const imgQuestion = "/assets/question.png";
 
 function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLeft }) {
   /* 
@@ -95,13 +95,15 @@ export default function Steps({ isMobile }) {
             className="w-[14px] h-[14px] inline-block mr-2 align-middle"
             alt=""
           />
-          <span className="align-middle">Not Sure Where to Start? We Got You</span>
+          <span className="align-middle">
+            How to get your free consultation on Divinetalk
+          </span>
         </div>
 
         <h2>
-          Simple Steps to Start Your {" "}
+          Simple Steps to Start{" "}
           <span className="bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent font-bold">
-            Journey
+            Your Journey
           </span>
         </h2>
 
@@ -130,7 +132,6 @@ export default function Steps({ isMobile }) {
                 border: "none",
               }}
             >
-
               <img
                 src={imgAppShowcase1}
                 alt="Get the App"
@@ -146,7 +147,10 @@ export default function Steps({ isMobile }) {
 
             {/* 3. CTA */}
             <div className="w-[300px] text-left mt-4 mb-8">
-              <a href="#chat" className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]">
+              <a
+                href="#chat"
+                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
+              >
                 Get Started Now
                 <img
                   alt=""
@@ -186,7 +190,10 @@ export default function Steps({ isMobile }) {
 
             {/* 3. CTA */}
             <div className="w-[300px] text-left mt-4 mb-8">
-              <a href="#chat" className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]">
+              <a
+                href="#chat"
+                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
+              >
                 Get Started Now
                 <img
                   alt=""
@@ -226,7 +233,10 @@ export default function Steps({ isMobile }) {
 
             {/* 3. CTA */}
             <div className="w-[300px] text-left mt-4 mb-8">
-              <a href="#chat" className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]">
+              <a
+                href="#chat"
+                className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
+              >
                 Get Started Now
                 <img
                   alt=""
@@ -244,13 +254,15 @@ export default function Steps({ isMobile }) {
   // Desktop Layout
   return (
     <div className="contents" data-node-id="steps">
-      <div
-        className="absolute h-[2992px] left-0 top-[3972px] w-[1920px] bg-gradient-to-b from-black via-[#150502] to-black -z-10"
-      />
+      <div className="absolute h-[2992px] left-0 top-[3972px] w-[1920px] bg-gradient-to-b from-black via-[#150502] to-black -z-10" />
 
       {/* Decorative background image9_1_6.png on top right corner absolute */}
       <div className="absolute h-[416px] left-[1666px] top-[4074px] w-[392px] opacity-15 overflow-hidden pointer-events-none select-none">
-        <img alt="" className="w-full h-full object-cover" src="/assets/image9_1_6.png" />
+        <img
+          alt=""
+          className="w-full h-full object-cover"
+          src="/assets/image9_1_6.png"
+        />
       </div>
 
       {/* Pill */}
@@ -260,18 +272,18 @@ export default function Steps({ isMobile }) {
       >
         <img alt="" className="size-[32px]" src={imgQuestion} />
         <span className="font-normal text-[24px] text-white whitespace-pre">
-          Not Sure Where to Start? We Got You
+          How to get free consultation on Divinetalk
         </span>
       </div>
 
       {/* Section Heading with multi-color gradient */}
       <p
-        className="absolute font-extrabold leading-[normal] left-[222px] text-[56px] text-center text-white top-[4248px] w-[1476px]"
+        className="absolute font-normal leading-[normal] left-[222px] text-[56px] text-center text-white top-[4248px] w-[1476px]"
         data-node-id="1:123"
       >
-        Simple Steps to{" "}
+        Simple Steps to Start{" "}
         <span className="bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
-          Start Your Journey
+          Your Journey
         </span>
       </p>
 
