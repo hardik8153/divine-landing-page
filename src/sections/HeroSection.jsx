@@ -10,7 +10,7 @@ const imgHeart = "/assets/Vector.png";
 export default function HeroSection({ isMobile }) {
   if (isMobile) {
     return (
-      <div className="m-hero relative w-full h-[761px] px-[32px] pt-[30px] flex flex-col items-center overflow-hidden" data-node-id="782-244">
+      <div className="m-hero relative w-full h-[900px] px-[32px] pt-[30px] flex flex-col items-center overflow-hidden" data-node-id="782-244">
         {/* Navigation Bar */}
         <div className="m-nav w-full flex justify-between items-center z-10">
           <img src={imgLightLogo4X1} className="w-[104px] h-auto opacity-100" alt="DivineTalk Astrology" />
