@@ -9,21 +9,36 @@ function FeatureCard({ left, top, highlighted, title, desc, img }) {
   return (
     <div className="absolute contents" style={{ left, top }}>
       <div
-        className={`absolute bg-black h-[409px] rounded-[20px] w-[460px] ${
-          highlighted ? "border border-[#fe9100]" : "border border-[rgba(255,255,255,0.5)]"
+        className={`absolute bg-black h-102.25 rounded-[20px] w-115 ${
+          highlighted
+            ? "border border-[#fe9100]"
+            : "border border-[rgba(255,255,255,0.5)]"
         }`}
         style={{ left, top }}
       />
-      <div className="absolute size-[96px] rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center" style={{ left: left + 32, top: top + 32 }}>
+      <div
+        className="absolute size-24 rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center"
+        style={{ left: left + 32, top: top + 32 }}
+      >
         <img alt="" className="w-16 h-16 opacity-90 object-contain" src={img} />
       </div>
-      <p className="absolute font-bold text-[32px] text-white whitespace-nowrap" style={{ left: left + 32, top: top + 148 }}>
+      <p
+        className="absolute font-bold text-[32px] text-white whitespace-nowrap"
+        style={{ left: left + 32, top: top + 148 }}
+      >
         {title}
       </p>
-      <p className="absolute font-normal text-[24px] text-[#939393] w-[396px]" style={{ left: left + 32, top: top + 208 }}>
+      <p
+        className="absolute font-normal text-[24px] text-[#939393] w-99"
+        style={{ left: left + 32, top: top + 208 }}
+      >
         {desc}
       </p>
-      <a href="#download" className="absolute font-normal text-[28px] text-[#fe9100] flex items-center gap-5" style={{ left: left + 32, top: top + 342 }}>
+      <a
+        href="#download"
+        className="absolute font-normal text-[28px] text-[#fe9100] flex items-center gap-5"
+        style={{ left: left + 32, top: top + 342 }}
+      >
         Get App
         <img alt="" className="w-4 h-6 -rotate-90" src={imgArrowDown} />
       </a>
@@ -46,7 +61,7 @@ export default function Features({ isMobile }) {
         <div className="m-pill">
           <img
             src={imgTrophy}
-            className="w-[14px] h-[14px] inline-block mr-2 align-middle"
+            className="w-3.5 h-3.5 inline-block mr-2 align-middle"
             alt=""
           />
           <span className="align-middle">
@@ -79,7 +94,7 @@ export default function Features({ isMobile }) {
               Get App
               <img
                 alt=""
-                className="max-w-[10px] max-h-[16px] -rotate-90 inline-block ml-5"
+                className="max-w-2.5 max-h-4 -rotate-90 inline-block ml-5"
                 src={imgArrowDown}
               />
             </a>
@@ -99,7 +114,7 @@ export default function Features({ isMobile }) {
               Get App
               <img
                 alt=""
-                className="max-w-[10px] max-h-[16px] -rotate-90 inline-block ml-5"
+                className="max-w-2.5 max-h-4 -rotate-90 inline-block ml-5"
                 src={imgArrowDown}
               />
             </a>
@@ -119,7 +134,7 @@ export default function Features({ isMobile }) {
               Get App
               <img
                 alt=""
-                className="max-w-[10px] max-h-[16px] -rotate-90 inline-block ml-5"
+                className="max-w-2.5 max-h-4 -rotate-90 inline-block ml-5"
                 src={imgArrowDown}
               />
             </a>
@@ -132,21 +147,18 @@ export default function Features({ isMobile }) {
   // Desktop Layout
   return (
     <div className="contents" data-node-id="1:34">
-      <div className="absolute h-[1223px] left-[423px] top-[1810px] w-[1094px] rounded-full bg-[#3a1a05] opacity-40 blur-[80px]" />
-      {/* <div className="absolute h-[809px] left-[1431px] top-[1453px] w-[810px] overflow-hidden opacity-20">
-        <img alt="" className="w-full h-full object-cover" src={imgCancer4X1} />
-      </div> */}
-      <div className="absolute h-[609px] left-[1551px] top-[1153px] w-[535px] opacity-20 overflow-hidden -rotate-[45deg]">
+      <div className="absolute h-305.75 left-105.75 top-[1810px] w-273.5 rounded-full bg-[#3a1a05] opacity-40 blur-[80px]" />
+      <div className="absolute h-152.25 left-[1551px] top-288.25 w-133.75opacity-20 overflow-hidden -rotate-45">
         <img alt="" className="w-full h-full object-cover" src={imgCancer4X1} />
       </div>
 
       <div
-        className="absolute left-[222px] top-[2306px] w-[1476px] border-t border-white/15"
+        className="absolute left-55.5 top-[2306px] w-369`border-t border-white/15"
         data-node-id="1:39"
       />
 
       <p
-        className="absolute font-normal left-[390px] text-[72px] text-center text-white top-[1360px] w-[1122px] capitalize"
+        className="absolute font-normal left-[390px]text-[72px] text-center text-white top-340 w-280.5 capitalize"
         data-node-id="1:41"
       >
         Experience Our{" "}
@@ -154,7 +166,7 @@ export default function Features({ isMobile }) {
       </p>
 
       <p
-        className="absolute font-normal leading-[normal] left-[488px] text-[#939393] text-[24px] text-center top-[1588px] w-[943px]"
+        className="absolute font-normal leading-[normal] left-122 text-[#939393] text-[24px] text-center top-[1588px] w-235.75"
         data-node-id="1:42"
       >
         Get instant, deep insights into your life's path. Our leading astrology
@@ -186,10 +198,10 @@ export default function Features({ isMobile }) {
       />
 
       <div
-        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[688px] rounded-[40px] top-[1248px] w-[570px] flex items-center gap-3 px-8"
+        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-16 left-172 rounded-[40px] top-312 w-142.5 flex items-center gap-3 px-8"
         data-node-id="1:86"
       >
-        <img alt="" className="size-[32px]" src={imgTrophy} />
+        <img alt="" className="size-8" src={imgTrophy} />
         <span className="font-normal text-[24px] text-white whitespace-pre">{`Top Choice  | Find Your True Direction  >`}</span>
       </div>
     </div>
