@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import Page from "./Page.jsx";
-import MobilePage from "./MobilePage.jsx";
+// import MobilePage from "./MobilePage.jsx";
 
 const DESIGN_WIDTH = 1920;
 const DESIGN_HEIGHT = 8506;
