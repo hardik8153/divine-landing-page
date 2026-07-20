@@ -22,8 +22,7 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
       {/* Step image */}
       {image && (
         <div
-          className={`absolute flex items-center justify-center relative ${isGooglePlayBadge ? "" : "rounded-[24px] overflow-hidden bg-[#100704] border border-[#8b5104]/30"
-            }`}
+          className={`absolute flex items-center justify-center ${isGooglePlayBadge ? "" : "rounded-3xl overflow-hidden bg-[#100704] border border-[#8b5104]/30"}`}
           style={{
             left: imgLeft,
             top: 0,
@@ -35,7 +34,7 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
 
           <img
             alt={tagline}
-            className={isGooglePlayBadge ? "w-[400px] h-auto object-contain relative z-10" : "w-full h-full object-cover"}
+            className={isGooglePlayBadge ? "w-100 h-auto object-contain relative z-10" : "w-full h-full object-cover"}
             src={image}
             style={isGooglePlayBadge ? { filter: "none" } : undefined}
           />
@@ -44,7 +43,7 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
 
       {/* Text content */}
       <div
-        className="absolute flex flex-col gap-[27px] items-start justify-center pt-24"
+        className="absolute flex flex-col gap-6.75 items-start justify-center pt-24"
         style={{ left: textLeft, top: 0, width: 555, height: 720 }}
       >
         {/* Large step number watermark on the left top of the heading */}
@@ -59,17 +58,17 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
         </span>
 
         <div className="relative z-10">
-          <p className="font-extrabold text-[18px] tracking-[6px] uppercase bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
+          <p className="font-extrabold text-[18px] tracking-[6px] uppercase bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
             {tagline}
           </p>
-          <div className="h-[2px] w-[72px] mt-[10px] bg-gradient-to-r from-[#fe9100] to-[#d92439]" />
+          <div className="h-0.5 w-18 mt-2.5 bg-linear-to-r from-[#fe9100] to-[#d92439]" />
         </div>
         <p className="font-normal text-[48px] leading-[1.2] text-white relative z-10">
           {headingPre} <span className="text-[#fe9100]">{headingHi}</span>
         </p>
         <a
           href="#chat"
-          className="flex items-center gap-3 font-bold text-[28px] bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent relative z-10"
+          className="flex items-center gap-3 font-bold text-[28px] bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent relative z-10"
         >
           Get Started Now
           <img
@@ -118,7 +117,7 @@ export default function Steps({ isMobile }) {
           {/* Step 1 */}
           <div className="m-step" style={{ alignItems: "center" }}>
             {/* 1. Number, heading and sub heading */}
-            <div className="m-step-content relative pt-16 w-[300px] text-left flex flex-col items-start">
+            <div className="m-step-content relative pt-16 w-75 text-left flex flex-col items-start">
               <span className="absolute left-3 top-5 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
                 01
               </span>
@@ -127,7 +126,7 @@ export default function Steps({ isMobile }) {
                 <h3 className="relative z-10">
                   Download DivineTalk for free from <em>Google Play.</em>
                 </h3>
-                <div className="w-[300px] text-left mt-4 mb-8">
+                <div className="w-75 text-left mt-4 mb-8">
                   <a
                     href="#chat"
                     className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
@@ -135,7 +134,7 @@ export default function Steps({ isMobile }) {
                     Get Started Now
                     <img
                       alt=""
-                      className="w-[16px] h-[24px] -rotate-90 inline-block ml-5"
+                      className="w-4 h-6 -rotate-90 inline-block ml-5"
                       src={imgArrowDown}
                     />
                   </a>
@@ -189,7 +188,7 @@ export default function Steps({ isMobile }) {
             style={{ alignItems: "center", height: "600px" }}
           >
             {/* 1. Number, heading and sub heading */}
-            <div className="m-step-content relative pt-16 w-[300px] text-left flex flex-col items-start">
+            <div className="m-step-content relative pt-16 w-75 text-left flex flex-col items-start">
               <span className="absolute left-3 top-5 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
                 02
               </span>
@@ -199,7 +198,7 @@ export default function Steps({ isMobile }) {
                   Simply enter your mobile number and verify it instantly with a{" "}
                   <em>secure OTP.</em>
                 </h3>
-                <div className="w-[300px] text-left mt-4 mb-8">
+                <div className="w-75 text-left mt-4 mb-8">
                   <a
                     href="#chat"
                     className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
@@ -207,7 +206,7 @@ export default function Steps({ isMobile }) {
                     Get Started Now
                     <img
                       alt=""
-                      className="w-[16px] h-[24px] -rotate-90 inline-block ml-5"
+                      className="w-4 h-6 -rotate-90 inline-block ml-5"
                       src={imgArrowDown}
                     />
                   </a>
@@ -216,7 +215,7 @@ export default function Steps({ isMobile }) {
             </div>
 
             {/* 3. CTA */}
-            <div className="w-[300px] text-left mt-4 mb-8">
+            <div className="w-75 text-left mt-4 mb-8">
               {/* <a
                 href="#chat"
                 className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
@@ -250,7 +249,7 @@ export default function Steps({ isMobile }) {
             style={{ alignItems: "center", height: "600px" }}
           >
             {/* 1. Number, heading and sub heading */}
-            <div className="m-step-content relative pt-16 w-[300px] text-left flex flex-col items-start">
+            <div className="m-step-content relative pt-16 w-75 text-left flex flex-col items-start">
               <span className="absolute left-1 top-6 text-[72px] font-extrabold text-white/10 leading-none pointer-events-none select-none">
                 03
               </span>
@@ -261,7 +260,7 @@ export default function Steps({ isMobile }) {
                   <em>first free consultation.</em>
                 </h3>
                 {/* 3. CTA */}
-                <div className="w-[300px] text-left mt-4 mb-8">
+                <div className="w-75 text-left mt-4 mb-8">
                   <a
                     href="#chat"
                     className="inline-flex items-center gap-5 text-[#fe9100] font-bold text-[14px]"
@@ -269,7 +268,7 @@ export default function Steps({ isMobile }) {
                     Get Started Now
                     <img
                       alt=""
-                      className="w-[16px] h-[24px] -rotate-90 inline-block ml-5"
+                      className="w-4 h-6 -rotate-90 inline-block ml-5"
                       src={imgArrowDown}
                     />
                   </a>
@@ -277,7 +276,7 @@ export default function Steps({ isMobile }) {
               </div>
             </div>
             {/* 3. CTA */}
-            <div className="w-[300px] text-left mt-4 mb-8">
+            <div className="w-75 text-left mt-4 mb-8">
               {/* <a
                 href="#chat"
                 className="inline-flex items-center gap-2 text-[#fe9100] font-bold text-[14px]"
@@ -311,10 +310,10 @@ export default function Steps({ isMobile }) {
   // Desktop Layout
   return (
     <div className="contents" data-node-id="steps">
-      <div className="absolute h-[2992px] left-0 top-[3972px] w-[1920px] bg-gradient-to-b from-black via-[#150502] to-black -z-10" />
+      <div className="absolute h-[2992px] left-0 top-[3972px] w-[1920px] bg-linear-to-b from-black via-[#150502] to-black -z-10" />
 
       {/* Decorative background image9_1_6.png on top right corner absolute */}
-      <div className="absolute h-[416px] left-[1666px] top-[4074px] w-[392px] opacity-15 overflow-hidden pointer-events-none select-none">
+      <div className="absolute h-104 left-[1666px] top-[4074px] w-98 opacity-15 overflow-hidden pointer-events-none select-none">
         <img
           alt=""
           className="w-full h-full object-cover"
@@ -324,10 +323,10 @@ export default function Steps({ isMobile }) {
 
       {/* Pill */}
       <div
-        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[624px] rounded-[40px] top-[4136px] w-[673px] flex items-center gap-3 px-8"
+        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-16 left-156 rounded-[40px] top-[4136px] w-168.25 flex items-center gap-3 px-8"
         data-node-id="1:124"
       >
-        <img alt="" className="size-[32px]" src={imgQuestion} />
+        <img alt="" className="size-8" src={imgQuestion} />
         <span className="font-normal text-[24px] text-white whitespace-pre">
           How to get free consultation on Divinetalk
         </span>
@@ -335,11 +334,11 @@ export default function Steps({ isMobile }) {
 
       {/* Section Heading with multi-color gradient */}
       <p
-        className="absolute font-normal leading-[normal] left-[222px] text-[56px] text-center text-white top-[4248px] w-[1476px]"
+        className="absolute font-normal leading-[normal] left-55.5 text-[56px] text-center text-white top-[4248px] w-369"
         data-node-id="1:123"
       >
         Simple Steps to Start{" "}
-        <span className="bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
+        <span className="bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
           Your Journey
         </span>
       </p>
@@ -379,7 +378,7 @@ export default function Steps({ isMobile }) {
 
       {/* Bottom divider */}
       <div
-        className="absolute h-0 left-[222px] top-[6964px] w-[1476px] border-t border-white/15"
+        className="absolute h-0 left-55.5 top-[6964px] w-369 border-t border-white/15"
         data-node-id="1:115"
       />
     </div>

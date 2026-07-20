@@ -123,22 +123,22 @@ export default function Stats({ isMobile }) {
   return (
     <div className="contents" data-node-id="stats">
       {/* decorative background */}
-      <div className="absolute h-[637px] left-[363px] top-[2416px] w-[1195px] opacity-20 overflow-hidden">
+      <div className="absolute h-159.25 left-90.75 top-[2416px] w-298.75 opacity-20 overflow-hidden">
         <img
           alt=""
           className="w-full h-full object-cover"
           src={imgVectorSmartObject2}
         />
       </div>
-      <div className="absolute h-[611px] left-[-176px] top-[3395px] w-[522px] opacity-20 overflow-hidden rotate-[22deg]">
+      <div className="absolute h-152.75 -left-44 top-[3395px] w-130.5 opacity-20 overflow-hidden rotate-22">
         <img alt="" className="w-full h-full object-cover" src={imgAsset34X1} />
       </div>
-      <div className="absolute h-[416px] left-[1666px] top-[2518px] w-[392px] opacity-15 overflow-hidden">
+      <div className="absolute h-104 left-[1666px] top-[2518px] w-98 opacity-15 overflow-hidden">
         <img alt="" className="w-full h-full object-cover" src={imgAsset44X1} />
       </div>
 
       <div
-        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[658px] rounded-[40px] top-[2470px] w-[633px] flex items-center gap-3 px-8"
+        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-16 left-164.5 rounded-[40px] top-[2470px] w-158.25 flex items-center gap-3 px-8"
         data-node-id="1:118"
       >
         <img alt="" className="size-8" src={imgRating} />
@@ -154,7 +154,7 @@ export default function Stats({ isMobile }) {
       </p>
 
       <p
-        className="absolute font-normal leading-[normal] left-[497px] text-[#939393] text-[24px] text-center top-[2810px] w-[943px]"
+        className="absolute font-normal leading-[normal] left-124.25 text-[#939393] text-[24px] text-center top-[2810px] w-235.75"
         data-node-id="1:117"
       >
         See how our expert astrologers are helping people find true direction
@@ -211,7 +211,7 @@ export default function Stats({ isMobile }) {
       </div>
 
       <div
-        className="absolute h-0 left-[222px] top-[3972px] w-[1476px] border-t border-white/15"
+        className="absolute h-0 left-55.5 top-[3972px] w-369 border-t border-white/15"
         data-node-id="1:108"
       />
     </div>
