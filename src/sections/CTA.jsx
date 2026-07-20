@@ -1,13 +1,24 @@
-const imgStart = "/assets/image8_1_6.png";
+const imgStart = "/assets/rocket.png";
 
 // 1:1 port of Figma node 1:241-1:252 "CTA website"
 export default function CTA({ isMobile }) {
   if (isMobile) {
     return (
       <section className="m-cta" id="cta">
+        {/* <img
+          alt=""
+          className="w-full h-full object-cover"
+          src="/assets/image16_1_6.png"
+        /> */}
         <div className="m-pill">
-          <img src={imgStart} className="w-[14px] h-[14px] inline-block mr-2 align-middle" alt="" />
-          <span className="align-middle">Get Started  |  Let the stars guide you  &gt;</span>
+          <img
+            src={imgStart}
+            className="w-[14px] h-[14px] inline-block mr-2 align-middle"
+            alt=""
+          />
+          <span className="align-middle">
+            Get Started | Let the stars guide you &gt;
+          </span>
         </div>
 
         <h2>
@@ -15,14 +26,12 @@ export default function CTA({ isMobile }) {
         </h2>
 
         <p>
-          Ready to find your answers? Unlock highly personalized insights, connect with top astrologers, and navigate your life's journey with absolute confidence.
+          Ready to find your answers? Unlock highly personalized insights,
+          connect with top astrologers, and navigate your life's journey with
+          absolute confidence.
         </p>
 
-        <a
-          href="#chat"
-          className="m-button"
-          style={{ marginTop: 32 }}
-        >
+        <a href="#chat" className="m-button" style={{ marginTop: 32 }}>
           Get Free Chat
         </a>
       </section>
@@ -37,7 +46,7 @@ export default function CTA({ isMobile }) {
       </div>
 
       <p className="absolute font-extrabold leading-[normal] left-[222px] text-[56px] text-center text-white top-[7242px] w-[1476px]" data-node-id="1:243">
-        start Your Journey with DivineTalk
+        Start Your Journey with DivineTalk
       </p>
 
       <p className="absolute font-normal leading-[normal] left-[497px] text-[#939393] text-[24px] text-center top-[7380px] w-[943px]" data-node-id="1:244">
