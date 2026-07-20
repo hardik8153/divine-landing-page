@@ -2,24 +2,28 @@ const imgVectorSmartObject2 = "/assets/image6_1_6.png";
 const imgAsset34X1 = "/assets/image7_1_6.png";
 const imgAsset44X1 = "/assets/image8_1_6.png";
 const imgRating = "/assets/image9_1_6.png";
-const imgAvatar = "/assets/image12_1_6.png";
-const imgStars = "/assets/image10_1_6.png";
+const imgPhoneMockup = "/assets/image11_1_6.png";
 
-function TestimonialCard({ left, top, w, name, text, textH }) {
+const imgAvatarRahul = "/assets/image12_1_6.png";
+const imgAvatarPriya = "/assets/image2_1_6.png";
+const imgAvatarAnjali = "/assets/image3_1_6.png";
+const imgAvatarVikram = "/assets/image4_1_6.png";
+
+function TestimonialCard({ left, top, w, name, text, textH, avatar }) {
   return (
     <div
-      className="absolute bg-black border border-white/15 rounded-[24px] flex flex-col gap-4 p-8"
+      className="absolute bg-[#100704] border border-[#8b5104] rounded-[24px] flex flex-col gap-4 p-8 animate-fade-in"
       style={{ left, top, width: w, minHeight: 294 }}
     >
       <div className="flex items-center justify-between">
         <div>
           <p className="text-white text-[28px] font-medium leading-none mb-2">{name}</p>
-          <img alt="rating" className="h-5" src={imgStars} />
+          <span className="text-[#fe9100] text-[20px] tracking-[2px] block mb-2">★★★★★</span>
         </div>
-        <img alt={name} className="w-16 h-16 rounded-full object-cover" src={imgAvatar} />
+        <img alt={name} className="w-16 h-16 rounded-full object-cover" src={avatar} />
       </div>
-      <hr className="border-white/15" />
-      <p className="text-[#939393] text-[20px]" style={{ minHeight: textH }}>
+      <hr className="border-[#8b5104]/30" />
+      <p className="text-[#939393] text-[20px] leading-relaxed" style={{ minHeight: textH }}>
         {text}
       </p>
     </div>
@@ -27,7 +31,69 @@ function TestimonialCard({ left, top, w, name, text, textH }) {
 }
 
 // 1:1 port of Figma nodes 1:102 (bg) + 1:116-1:204 (stats/testimonials)
-export default function Stats() {
+export default function Stats({ isMobile }) {
+  if (isMobile) {
+    return (
+      <section className="m-stories" id="stats">
+        <div className="m-pill">
+          <img src={imgRating} className="w-[14px] h-[14px] inline-block mr-2 align-middle" alt="" />
+          <span className="align-middle">Success Stories  |  Hear from our community  &gt;</span>
+        </div>
+
+        <h2>
+          Empowering thousands with precise readings and life-altering advice.
+        </h2>
+
+        <p className="m-lead">
+          See how our expert astrologers are helping people find true direction and peace of mind every single day.
+        </p>
+
+        <div className="m-review-list">
+          {/* Card 1: Rahul */}
+          <div className="m-review">
+            <img src={imgAvatarRahul} alt="Rahul" />
+            <h3>Rahul</h3>
+            <b>★★★★★</b>
+            <p>
+              Is app ki wajah se main khud ko aur deeply samajh paaya hoon. Meri personalized readings bilkul spot on thi!
+            </p>
+          </div>
+
+          {/* Card 2: Anjali */}
+          <div className="m-review">
+            <img src={imgAvatarAnjali} alt="Anjali" />
+            <h3>Anjali</h3>
+            <b>★★★★★</b>
+            <p>
+              Daily horoscopes aur insights ne mujhe life mein better decisions lene mein bahut help ki hai. Yeh app sach mein amazing hai!
+            </p>
+          </div>
+
+          {/* Card 3: Priya */}
+          <div className="m-review">
+            <img src={imgAvatarPriya} alt="Priya" />
+            <h3>Priya</h3>
+            <b>★★★★★</b>
+            <p>
+              Yahan ki guidance se mujhe apne future aur relationships ko lekar kaafi clarity mili hai. Experts ki advice bahut trustworthy hai.
+            </p>
+          </div>
+
+          {/* Card 4: Vikram */}
+          <div className="m-review">
+            <img src={imgAvatarVikram} alt="Vikram" />
+            <h3>Vikram</h3>
+            <b>★★★★★</b>
+            <p>
+              Pehli baar kisi astrology app par itna trust hua hai. Yahan ke astrologers jo batate hain, wo ekdum sach aur accurate hota hai.
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop Layout
   return (
     <div className="contents" data-node-id="stats">
       {/* decorative background */}
@@ -61,6 +127,7 @@ export default function Stats() {
         name="Rahul"
         text="Is app ki wajah se main khud ko aur deeply samajh paaya hoon. Meri personalized readings bilkul spot on thi!"
         textH={96}
+        avatar={imgAvatarRahul}
       />
       <TestimonialCard
         left={293}
@@ -69,6 +136,7 @@ export default function Stats() {
         name="Priya"
         text="Yahan ki guidance se mujhe apne future aur relationships ko lekar kaafi clarity mili hai. Experts ki advice bahut trustworthy hai."
         textH={120}
+        avatar={imgAvatarPriya}
       />
       <TestimonialCard
         left={1283}
@@ -77,6 +145,7 @@ export default function Stats() {
         name="Anjali"
         text="Daily horoscopes aur insights ne mujhe life mein better decisions lene mein bahut help ki hai. Yeh app sach mein amazing hai!"
         textH={120}
+        avatar={imgAvatarAnjali}
       />
       <TestimonialCard
         left={1251}
@@ -85,7 +154,13 @@ export default function Stats() {
         name="Vikram"
         text="Pehli baar kisi astrology app par itna trust hua hai. Yahan ke astrologers jo batate hain, wo ekdum sach aur accurate hota hai."
         textH={120}
+        avatar={imgAvatarVikram}
       />
+
+      {/* Center Phone Mockup */}
+      <div className="absolute overflow-hidden flex items-center justify-center pointer-events-none select-none" style={{ left: 710, top: 2950, width: 500, height: 960 }}>
+        <img alt="" className="w-full h-full object-contain" src={imgPhoneMockup} />
+      </div>
 
       <div className="absolute h-0 left-[222px] top-[3972px] w-[1476px] border-t border-white/15" data-node-id="1:108" />
     </div>

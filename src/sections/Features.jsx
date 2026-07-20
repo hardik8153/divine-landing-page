@@ -1,9 +1,11 @@
-const imgCancer4X1 = "/assets/image14_1_6.png";
+const imgCancer4X1 = "/assets/image5_1_6.png";
 const imgArrowDown = "/assets/arrow.png";
-const imgGroup130755 = "/assets/image9_1_6.png";
+const imgAstroIcon1 = "/assets/image8_1_6.png";
+const imgAstroIcon2 = "/assets/image9_1_6.png";
+const imgAstroIcon3 = "/assets/image10_1_6.png";
 const imgTrophy = "/assets/image8_1_6.png";
 
-function FeatureCard({ left, top, highlighted, title, desc }) {
+function FeatureCard({ left, top, highlighted, title, desc, img }) {
   return (
     <div className="absolute contents" style={{ left, top }}>
       <div
@@ -13,7 +15,7 @@ function FeatureCard({ left, top, highlighted, title, desc }) {
         style={{ left, top }}
       />
       <div className="absolute size-[96px] rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center" style={{ left: left + 32, top: top + 32 }}>
-        <img alt="" className="w-16 h-16 opacity-90" src={imgGroup130755} />
+        <img alt="" className="w-16 h-16 opacity-90 object-contain" src={img} />
       </div>
       <p className="absolute font-bold text-[32px] text-white whitespace-nowrap" style={{ left: left + 32, top: top + 148 }}>
         {title}
@@ -30,7 +32,68 @@ function FeatureCard({ left, top, highlighted, title, desc }) {
 }
 
 // 1:1 port of Figma node 1:34 "features"
-export default function Features() {
+export default function Features({ isMobile }) {
+  if (isMobile) {
+    return (
+      <section className="m-features" id="features">
+        <div className="m-pill">
+          <img src={imgTrophy} className="w-[14px] h-[14px] inline-block mr-2 align-middle" alt="" />
+          <span className="align-middle">Top Choice  |  Find Your True Direction  &gt;</span>
+        </div>
+        
+        <h2>
+          Experience Our <em>Premium Astrology Feature</em>
+        </h2>
+        
+        <p className="m-lead">
+          Get instant, deep insights into your life's path. Our leading astrology feature reveals the cosmic forces shaping your future so you can navigate with confidence.
+        </p>
+
+        <div className="m-card-list">
+          {/* Card 1: Daily Horoscopes (selected) */}
+          <div className="m-feature-card selected">
+            <img src={imgAstroIcon2} alt="" />
+            <h3>Daily Horoscopes</h3>
+            <p>
+              Get personalized daily, weekly, and monthly insights aligned with your zodiac.
+            </p>
+            <a href="#download">
+              Get App
+              <img alt="" className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]" src={imgArrowDown} />
+            </a>
+          </div>
+
+          {/* Card 2: Kundli Match */}
+          <div className="m-feature-card">
+            <img src={imgAstroIcon1} alt="" />
+            <h3>Kundli Match</h3>
+            <p>
+              Calculate deep relationship compatibility scores for a harmonious future together.
+            </p>
+            <a href="#download">
+              Get App
+              <img alt="" className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]" src={imgArrowDown} />
+            </a>
+          </div>
+
+          {/* Card 3: Today's Panchang */}
+          <div className="m-feature-card">
+            <img src={imgAstroIcon3} alt="" />
+            <h3>Today's Panchang</h3>
+            <p>
+              Track auspicious timings and daily planetary alignments with precise accuracy.
+            </p>
+            <a href="#download">
+              Get App
+              <img alt="" className="w-[10px] h-[6px] -rotate-90 inline-block ml-[6px]" src={imgArrowDown} />
+            </a>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  // Desktop Layout
   return (
     <div className="contents" data-node-id="1:34">
       <div className="absolute h-[1223px] left-[423px] top-[1810px] w-[1094px] rounded-full bg-[#3a1a05] opacity-40 blur-[80px]" />
@@ -54,18 +117,21 @@ export default function Features() {
         highlighted
         title="Daily Horoscopes"
         desc="Get personalized daily, weekly, and monthly insights aligned with your zodiac."
+        img={imgAstroIcon2}
       />
       <FeatureCard
         left={1238}
         top={1733}
         title="Today's Panchang"
         desc="Track auspicious timings and daily planetary alignments with precise accuracy."
+        img={imgAstroIcon3}
       />
       <FeatureCard
         left={222}
         top={1730}
         title="Kundli Match"
         desc="Calculate deep relationship compatibility scores for a harmonious future together."
+        img={imgAstroIcon1}
       />
 
       <div className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[688px] rounded-[40px] top-[1248px] w-[545px] flex items-center gap-3 px-8" data-node-id="1:86">
