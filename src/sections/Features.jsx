@@ -35,7 +35,14 @@ function FeatureCard({ left, top, highlighted, title, desc, img }) {
 export default function Features({ isMobile }) {
   if (isMobile) {
     return (
-      <section className="m-features" id="features">
+      <section className="m-features relative" id="features">
+        <div className="absolute h-43.5 -right-20 w-38.25 opacity-20 overflow-hidden -rotate-45">
+          <img
+            alt=""
+            className="w-full h-full object-cover"
+            src={imgCancer4X1}
+          />
+        </div>
         <div className="m-pill">
           <img
             src={imgTrophy}
@@ -126,18 +133,33 @@ export default function Features({ isMobile }) {
   return (
     <div className="contents" data-node-id="1:34">
       <div className="absolute h-[1223px] left-[423px] top-[1810px] w-[1094px] rounded-full bg-[#3a1a05] opacity-40 blur-[80px]" />
-      <div className="absolute h-[809px] left-[1431px] top-[1453px] w-[810px] overflow-hidden opacity-20">
+      {/* <div className="absolute h-[809px] left-[1431px] top-[1453px] w-[810px] overflow-hidden opacity-20">
+        <img alt="" className="w-full h-full object-cover" src={imgCancer4X1} />
+      </div> */}
+      <div className="absolute h-[609px] left-[1551px] top-[1153px] w-[535px] opacity-20 overflow-hidden -rotate-[45deg]">
         <img alt="" className="w-full h-full object-cover" src={imgCancer4X1} />
       </div>
 
-      <div className="absolute left-[222px] top-[2306px] w-[1476px] border-t border-white/15" data-node-id="1:39" />
+      <div
+        className="absolute left-[222px] top-[2306px] w-[1476px] border-t border-white/15"
+        data-node-id="1:39"
+      />
 
-      <p className="absolute font-normal left-[390px] text-[72px] text-center text-white top-[1360px] w-[1122px] capitalize" data-node-id="1:41">
-        Experience Our <span className="text-[#fe9100]">Premium Astrology Feature</span>
+      <p
+        className="absolute font-normal left-[390px] text-[72px] text-center text-white top-[1360px] w-[1122px] capitalize"
+        data-node-id="1:41"
+      >
+        Experience Our{" "}
+        <span className="text-[#fe9100]">Premium Astrology Feature</span>
       </p>
 
-      <p className="absolute font-normal leading-[normal] left-[488px] text-[#939393] text-[24px] text-center top-[1588px] w-[943px]" data-node-id="1:42">
-        Get instant, deep insights into your life's path. Our leading astrology feature reveals the cosmic forces shaping your future so you can navigate with confidence.
+      <p
+        className="absolute font-normal leading-[normal] left-[488px] text-[#939393] text-[24px] text-center top-[1588px] w-[943px]"
+        data-node-id="1:42"
+      >
+        Get instant, deep insights into your life's path. Our leading astrology
+        feature reveals the cosmic forces shaping your future so you can
+        navigate with confidence.
       </p>
 
       <FeatureCard
@@ -163,7 +185,10 @@ export default function Features({ isMobile }) {
         img={imgAstroIcon1}
       />
 
-      <div className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[688px] rounded-[40px] top-[1248px] w-[570px] flex items-center gap-3 px-8" data-node-id="1:86">
+      <div
+        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-[64px] left-[688px] rounded-[40px] top-[1248px] w-[570px] flex items-center gap-3 px-8"
+        data-node-id="1:86"
+      >
         <img alt="" className="size-[32px]" src={imgTrophy} />
         <span className="font-normal text-[24px] text-white whitespace-pre">{`Top Choice  | Find Your True Direction  >`}</span>
       </div>

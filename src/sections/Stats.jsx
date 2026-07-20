@@ -12,7 +12,7 @@ const imgAvatarVikram = "/assets/image4_1_6.png";
 function TestimonialCard({ left, top, w, name, text, textH, avatar }) {
   return (
     <div
-      className="absolute bg-[#100704] border border-[#8b5104] rounded-[24px] flex flex-col gap-4 p-8 animate-fade-in"
+      className="absolute bg-[#100704] border border-[#8b5104] rounded-3xl flex flex-col gap-4 p-8 animate-fade-in"
       style={{ left, top, width: w, minHeight: 294 }}
     >
       <div className="flex items-center justify-between">
@@ -34,11 +34,25 @@ function TestimonialCard({ left, top, w, name, text, textH, avatar }) {
 export default function Stats({ isMobile }) {
   if (isMobile) {
     return (
-      <section className="m-stories" id="stats">
+      <section className="m-stories relative" id="stats">
+        <div className="absolute h-52 -right-20 top-50  w-49 opacity-20 overflow-hidden">
+          <img
+            alt=""
+            className="w-full h-full object-cover"
+            src={imgAsset44X1}
+          />
+        </div>
+        <div className="absolute h-65.5 -left-29` bottom-0  w-55.75 opacity-20 overflow-hidden rotate-22">
+          <img
+            alt=""
+            className="w-full h-full object-cover"
+            src={imgAsset34X1}
+          />
+        </div>
         <div className="m-pill">
           <img
             src={imgRating}
-            className="w-[14px] h-[14px] inline-block mr-2 align-middle"
+            className="w-3.5 h-3.5 inline-block mr-2 align-middle"
             alt=""
           />
           <span className="align-middle">
@@ -116,7 +130,7 @@ export default function Stats({ isMobile }) {
           src={imgVectorSmartObject2}
         />
       </div>
-      <div className="absolute h-[762px] left-[-176px] top-[3395px] w-[713px] opacity-20 overflow-hidden rotate-[22deg]">
+      <div className="absolute h-[611px] left-[-176px] top-[3395px] w-[522px] opacity-20 overflow-hidden rotate-[22deg]">
         <img alt="" className="w-full h-full object-cover" src={imgAsset34X1} />
       </div>
       <div className="absolute h-[416px] left-[1666px] top-[2518px] w-[392px] opacity-15 overflow-hidden">
@@ -130,14 +144,6 @@ export default function Stats({ isMobile }) {
         <img alt="" className="size-8" src={imgRating} />
         <span className="font-normal text-[24px] text-white whitespace-pre">{`Success Stories | Hear from our community >`}</span>
       </div>
-
-      {/* <p
-        className="absolute font-extrabold leading-[90px] left-[222px] text-[64px] text-white top-[2582px] w-[1476px]"
-        data-node-id="1:116"
-      >
-        Empowering thousands with <em>precise readings</em> and life-altering
-        advice.
-      </p> */}
       <p
         className="absolute font-normal left-55.5 text-[72px] text-center text-white top-[2582px] w-369 capitalize"
         data-node-id="1:116"

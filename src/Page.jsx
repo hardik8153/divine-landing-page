@@ -22,7 +22,7 @@ export default function Page() {
 
   if (isMobile) {
     return (
-      <div className="mobile-page max-w-[428px] mx-auto min-h-screen bg-[#020001] text-white relative">
+      <div className="mobile-page max-w-107 mx-auto min-h-screen bg-[#020001] text-white relative">
         <style>{`
           #root > div {
             height: auto !important;
