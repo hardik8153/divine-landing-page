@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +15,7 @@ body {
 .mobile-page h1, .mobile-page h2, .mobile-page h3, .mobile-page p { margin: 0; }
 .mobile-page em { color: #fe9100; font-style: normal; }
 .m-hero { min-height:761px; isolation:isolate; background:#020001; }
-.m-hero::before { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(90deg,rgba(2,0,1,.98) 0%,rgba(2,0,1,.87) 49%,rgba(2,0,1,.28) 100%),url('/assets/image0_1_6.png') -125px 142px / 576px auto no-repeat; }
+.m-hero::before { content:""; position:absolute; z-index:-1; inset:0; background:linear-gradient(90deg,rgba(2,0,1,.98) 0%,rgba(2,0,1,.87) 49%,rgba(2,0,1,.28) 100%),url('/assets/image0_1_6.png') -125px bottom / 576px auto no-repeat; }
 .m-nav { display: flex; align-items: center; justify-content: space-between; }
 .m-nav img { width:104px; height:auto; }.m-menu { color:#fe9100; font-size:30px; font-weight:700; line-height:1; }
 .m-hero-copy { max-width:300px; margin-top:58px; }.m-hero h1 { font-size:35px; line-height:1.18; font-weight:800; }.m-hero h1 em { display:block; }
