@@ -42,7 +42,7 @@ export default function Stats({ isMobile }) {
             src={imgAsset44X1}
           />
         </div>
-        <div className="absolute h-65.5 -left-29` bottom-0  w-55.75 opacity-20 overflow-hidden rotate-22">
+        <div className="absolute h-65.5 -left-18 -bottom-10  w-55.75 opacity-20 overflow-hidden rotate-22">
           <img
             alt=""
             className="w-full h-full object-cover"
