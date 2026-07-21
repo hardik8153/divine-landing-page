@@ -7,7 +7,7 @@ import Footer from "./sections/Footer.jsx";
 
 export default function Page() {
   return (
-    <main className="relative bg-[#020001] text-white w-full overflow-hidden">
+    <main className="relative bg-[#020001] text-white w-full overflow-hidden font-gilroy">
       <HeroSection />
       <Features />
       <Stats />

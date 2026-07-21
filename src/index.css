@@ -1,8 +1,9 @@
+@import url('https://fonts.cdnfonts.com/css/gilroy-bold');
 @import "tailwindcss";
 @config "../tailwind.config.js";
 
 @theme {
-  --font-gilroy: "Gilroy-ExtraBold", "Gilroy-Bold", "Gilroy-Regular", "Gilroy", "Poppins", sans-serif;
+  --font-gilroy: "Gilroy-ExtraBold", "Gilroy-Bold", "Gilroy", "Poppins", sans-serif;
   --font-poppins: "Poppins", sans-serif;
 }
 

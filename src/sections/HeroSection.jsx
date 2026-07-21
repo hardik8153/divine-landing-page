@@ -13,14 +13,17 @@ export default function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="relative w-full min-h-screen flex flex-col justify-between  overflow-hidden isolate" id="home">
+    <header
+      className="relative w-full min-h-screen flex flex-col justify-between  overflow-hidden isolate"
+      id="home"
+    >
       {/* Background Hero Banner */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         {/* Mobile Background */}
         <img
           src={imgBgMobile}
           alt=""
-          className="md:hidden w-full h-full object-cover object-bottom opacity-0"
+          className="md:hidden w-full h-full object-cover object-bottom opacity-100"
         />
         {/* Desktop Background */}
         <img
@@ -28,7 +31,7 @@ export default function HeroSection() {
           alt=""
           className="hidden md:block w-full h-full object-cover object-top opacity-100"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-[#020001]" />
+        {/* <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-[#020001]" /> */}
       </div>
 
       {/* Navigation Bar */}
@@ -43,13 +46,22 @@ export default function HeroSection() {
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex items-center gap-10 text-lg font-medium">
-          <a href="#home" className="text-[#fe9100] font-bold hover:opacity-80 transition-opacity">
+          <a
+            href="#home"
+            className="text-[#fe9100] font-bold hover:opacity-80 transition-opacity"
+          >
             Home
           </a>
-          <a href="#features" className="text-white hover:text-[#fe9100] transition-colors">
+          <a
+            href="#features"
+            className="text-white hover:text-[#fe9100] transition-colors"
+          >
             Our Features
           </a>
-          <a href="#steps" className="text-white hover:text-[#fe9100] transition-colors">
+          <a
+            href="#steps"
+            className="text-white hover:text-[#fe9100] transition-colors"
+          >
             Download Our App
           </a>
         </div>
@@ -58,7 +70,7 @@ export default function HeroSection() {
         <div className="hidden md:block">
           <a
             href="#chat"
-            className="inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-orange-red text-white text-lg font-bold shadow-lg shadow-orange-500/20 hover:scale-105 transition-transform"
+            className="font-gilroy inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-orange-red text-white text-2xl font-normal shadow-lg shadow-orange-500/20 hover:scale-105 transition-transform"
           >
             Get Free Chat
           </a>
@@ -70,9 +82,15 @@ export default function HeroSection() {
           className="md:hidden w-10 h-10 border border-white/20 rounded-lg flex flex-col items-center justify-center gap-1.5 focus:outline-none bg-black/40 backdrop-blur-md"
           aria-label="Toggle navigation menu"
         >
-          <span className={`w-5 h-0.5 bg-white transition-transform ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
-          <span className={`w-5 h-0.5 bg-white transition-opacity ${mobileMenuOpen ? "opacity-0" : ""}`} />
-          <span className={`w-5 h-0.5 bg-white transition-transform ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`} />
+          <span
+            className={`w-5 h-0.5 bg-white transition-transform ${mobileMenuOpen ? "rotate-45 translate-y-2" : ""}`}
+          />
+          <span
+            className={`w-5 h-0.5 bg-white transition-opacity ${mobileMenuOpen ? "opacity-0" : ""}`}
+          />
+          <span
+            className={`w-5 h-0.5 bg-white transition-transform ${mobileMenuOpen ? "-rotate-45 -translate-y-2" : ""}`}
+          />
         </button>
       </nav>
 
@@ -111,13 +129,15 @@ export default function HeroSection() {
       )}
 
       {/* Hero Content Section */}
-      <div className="w-full max-w-7xl mx-auto px-6 py-12 md:py-24 flex flex-col items-center lg:items-start text-center lg:text-left z-10 my-auto">
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight max-w-3xl">
-          Your Answers Are Just{" "}
-          <span className="block lg:inline text-[#fe9100]">A Tap Away</span>
+      <div className="w-full max-w-7xl mx-auto px-6 py-12 md:py-24 mt-0 flex flex-col items-center lg:items-start text-center lg:text-left z-10 my-auto">
+        <h1 className="font-gilroy text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight max-w-2xl">
+          Your Answers Are{" "}
+          <span className="block lg:inline text-[#fe9100]">
+            Just A Tap Away!
+          </span>
         </h1>
 
-        <p className="mt-6 text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
+        <p className="font-gilroy font-normal mt-6 text-[#939393] text-[14px] md:text-xl leading-relaxed max-w-2xl">
           Get personalized guidance, deep insights, and expert advice anytime,
           anywhere. Download the DivineTalk app today and take the first step
           toward clarity.
@@ -127,14 +147,14 @@ export default function HeroSection() {
         <div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
           <a
             href="#chat"
-            className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-gradient-orange-red text-white text-lg sm:text-xl font-bold shadow-xl shadow-orange-600/30 hover:scale-105 transition-transform"
+            className="inline-flex items-center justify-center px-5 md:px-12 py-2 md:py-4 rounded-full bg-gradient-orange-red text-white text-lg sm:text-[14px] md:text-[32px] font-normal shadow-xl shadow-orange-600/30 hover:scale-105 transition-transform"
           >
             Get Free Chat
           </a>
 
           <a
             href="#features"
-            className="flex items-center gap-2 text-white text-sm sm:text-base hover:text-[#fe9100] transition-colors"
+            className="font-gilroy font-normal flex items-center gap-2 text-white text-sm sm:text-base hover:text-[#fe9100] transition-colors"
           >
             <span>Scroll Down To Know More</span>
             <img src={imgArrowDown} alt="" className="w-4 h-4" />
