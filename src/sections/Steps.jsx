@@ -56,7 +56,7 @@ export default function Steps() {
         </h2>
 
         {/* Step Blocks List */}
-        <div className="mt-20 w-full flex flex-col gap-20 md:gap-32">
+        <div className="mt-20 md:mt-5 w-full flex flex-col gap-20 md:gap-32">
           {stepsData.map((step) => (
             <div
               key={step.number}
