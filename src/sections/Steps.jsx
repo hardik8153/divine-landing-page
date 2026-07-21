@@ -36,7 +36,10 @@ const stepsData = [
 
 export default function Steps() {
   return (
-    <section className="relative w-full py-20 md:py-32 bg-gradient-to-b from-[#020001] via-[#150502] to-[#020001] overflow-hidden" id="steps">
+    <section
+      className="relative w-full py-20 md:py-32 bg-linear-to-b from-[#020001] via-[#150502] to-[#020001] overflow-hidden"
+      id="steps"
+    >
       <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
         {/* Pill Badge */}
         <div className="pill-badge">
@@ -47,7 +50,7 @@ export default function Steps() {
         {/* Section Heading */}
         <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white max-w-4xl leading-tight">
           Simple Steps to Start{" "}
-          <span className="bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
+          <span className="bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
             Your Journey
           </span>
         </h2>
@@ -69,15 +72,17 @@ export default function Steps() {
                 </span>
 
                 <div className="relative z-10">
-                  <p className="text-xs sm:text-sm font-extrabold tracking-[4px] uppercase bg-gradient-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
+                  <p className="text-xs sm:text-sm font-extrabold tracking-[4px] uppercase bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
                     - {step.tagline}
                   </p>
-                  <div className="h-0.5 w-12 mt-2 bg-gradient-to-r from-[#fe9100] to-[#d92439]" />
+                  <div className="h-0.5 w-12 mt-2 bg-linear-to-r from-[#fe9100] to-[#d92439]" />
                 </div>
 
                 <h3 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-normal leading-tight text-white relative z-10">
                   {step.headingPre}{" "}
-                  <span className="text-[#fe9100] font-semibold">{step.headingHi}</span>
+                  <span className="text-[#fe9100] font-semibold">
+                    {step.headingHi}
+                  </span>
                 </h3>
 
                 <a
@@ -96,7 +101,7 @@ export default function Steps() {
               {/* Image Block */}
               <div className="w-full lg:w-1/2 flex justify-center items-center">
                 <div
-                  className={`relative w-full max-w-md h-80 sm:h-96 md:h-[450px] flex items-center justify-center ${
+                  className={`relative w-full max-w-md h-80 sm:h-96 md:h-112.5 flex items-center justify-center ${
                     step.isBadge
                       ? "p-4"
                       : "rounded-3xl overflow-hidden bg-[#100704] border border-[#8b5104]/40 shadow-2xl shadow-black/80"
@@ -106,7 +111,9 @@ export default function Steps() {
                     src={step.image}
                     alt={step.tagline}
                     className={`w-full h-full ${
-                      step.isBadge ? "object-contain max-h-48 sm:max-h-64" : "object-cover"
+                      step.isBadge
+                        ? "object-contain max-h-48 sm:max-h-64"
+                        : "object-cover"
                     }`}
                   />
                 </div>

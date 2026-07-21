@@ -10,7 +10,7 @@ export default function CTA() {
           alt=""
           className="w-full h-full object-cover opacity-30"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020001] via-transparent to-[#020001]" />
+        <div className="absolute inset-0 bg-linear-to-b from-[#020001] via-transparent to-[#020001]" />
       </div>
 
       <div className="w-full max-w-5xl mx-auto px-6 flex flex-col items-center text-center relative z-10">

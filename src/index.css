@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@config "../tailwind.config.js";
 
 @theme {
   --font-gilroy: "Gilroy-ExtraBold", "Gilroy-Bold", "Gilroy-Regular", "Gilroy", "Poppins", sans-serif;

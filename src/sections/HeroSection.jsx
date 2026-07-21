@@ -28,7 +28,7 @@ export default function HeroSection() {
           alt=""
           className="hidden md:block w-full h-full object-cover object-top opacity-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#020001]" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-[#020001]" />
       </div>
 
       {/* Navigation Bar */}
@@ -114,7 +114,7 @@ export default function HeroSection() {
       <div className="w-full max-w-7xl mx-auto px-6 py-12 md:py-24 flex flex-col items-center lg:items-start text-center lg:text-left z-10 my-auto">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight max-w-3xl">
           Your Answers Are Just{" "}
-          <span className="block lg:inline text-[#fe9100]">A Tap Away!</span>
+          <span className="block lg:inline text-[#fe9100]">A Tap Away</span>
         </h1>
 
         <p className="mt-6 text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed max-w-2xl">
