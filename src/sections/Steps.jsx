@@ -13,6 +13,7 @@ const stepsData = [
     image: imgAppShowcase1,
     isBadge: true,
     imageLeft: false,
+    link: "https://play.google.com/store/apps/details?id=app.divine"
   },
   {
     number: "02",
@@ -22,6 +23,7 @@ const stepsData = [
     image: imgAppShowcase2,
     isBadge: false,
     imageLeft: true,
+    link: "https://divinetalk.in/Astrology"
   },
   {
     number: "03",
@@ -31,6 +33,7 @@ const stepsData = [
     image: imgAstrologer1,
     isBadge: false,
     imageLeft: false,
+    link: "https://divinetalk.in/Astrology"
   },
 ];
 
@@ -42,7 +45,7 @@ export default function Steps() {
     >
       <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
         {/* Pill Badge */}
-        <div className="pill-badge">
+        <div className="pill-badge flex items-center gap-2">
           <img src={imgQuestion} className="w-5 h-5 object-contain" alt="" />
           <span>How to get free consultation on Divinetalk</span>
         </div>
@@ -60,9 +63,8 @@ export default function Steps() {
           {stepsData.map((step) => (
             <div
               key={step.number}
-              className={`flex flex-col ml-20 ${
-                step.imageLeft ? "lg:flex-row-reverse" : "lg:flex-row"
-              } items-center justify-between gap-12 text-left relative`}
+              className={`flex flex-col ml-20 ${step.imageLeft ? "lg:flex-row-reverse" : "lg:flex-row"
+                } items-center justify-between gap-12 text-left relative`}
             >
               {/* Text Content Block */}
               <div className="w-full lg:w-1/2 flex flex-col items-start relative pt-8 ">
@@ -74,7 +76,7 @@ export default function Steps() {
                 <div className="relative z-10">
                   <p className="inline-flex gap-3 text-xs sm:text-sm font-extrabold tracking-[4px] uppercase bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
                     <div className="h-px w-10 md:w-15 mt-2 bg-linear-to-r from-[#fe9100] to-[#d92439]" />{" "}
-                    { step.tagline}
+                    {step.tagline}
                   </p>
                   {/* <div className="h-0.5 w-12 mt-2 bg-linear-to-r from-[#fe9100] to-[#d92439]" /> */}
                 </div>
@@ -87,7 +89,8 @@ export default function Steps() {
                 </h3>
 
                 <a
-                  href="#chat"
+                  href={step.link}
+                  target="_blank"
                   className="mt-8 inline-flex items-center gap-3 font-bold text-lg sm:text-xl text-gradient-orange-red hover:opacity-80 transition-opacity"
                 >
                   <span>Get Started Now</span>
@@ -101,23 +104,28 @@ export default function Steps() {
 
               {/* Image Block */}
               <div className="w-full lg:w-1/2 flex justify-center items-center">
-                <div
-                  className={`relative w-full max-w-md sm:min-h-96 md:h-112.5 flex items-start md:items-center justify-center ${
-                    step.isBadge
-                      ? "p-4"
-                      : "rounded-3xl overflow-hidden bg-[#100704] border border-[#8b5104]/40 shadow-2xl shadow-black/80"
-                  }`}
+                <a
+                  href="https://play.google.com/store/apps/details?id=app.divine"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full max-w-md"
                 >
-                  <img
-                    src={step.image}
-                    alt={step.tagline}
-                    className={`w-full h-full ${
-                      step.isBadge
-                        ? "object-contain max-h-48 sm:max-h-64"
-                        : "object-cover"
-                    }`}
-                  />
-                </div>
+                  <div
+                    className={`relative w-full sm:min-h-96 md:h-112.5 flex items-start md:items-center justify-center ${step.isBadge
+                        ? "p-4"
+                        : "rounded-3xl overflow-hidden bg-[#100704] border border-[#8b5104]/40 shadow-2xl shadow-black/80"
+                      }`}
+                  >
+                    <img
+                      src={step.image}
+                      alt={step.tagline}
+                      className={`w-full h-full ${step.isBadge
+                          ? "object-contain max-h-48 sm:max-h-64"
+                          : "object-cover"
+                        }`}
+                    />
+                  </div>
+                </a>
               </div>
             </div>
           ))}

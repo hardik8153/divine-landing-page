@@ -12,6 +12,7 @@ const featureItems = [
     desc: "Calculate deep relationship compatibility scores for a harmonious future together.",
     img: imgAstroIcon1,
     highlighted: false,
+    link:"https://divinetalk.in/kundli"
   },
   {
     id: "horoscope",
@@ -19,6 +20,7 @@ const featureItems = [
     desc: "Get personalized daily, weekly, and monthly insights aligned with your zodiac.",
     img: imgAstroIcon2,
     highlighted: true,
+    link:"https://divinetalk.in/daily-horoscope"
   },
   {
     id: "panchang",
@@ -26,6 +28,7 @@ const featureItems = [
     desc: "Track auspicious timings and daily planetary alignments with precise accuracy.",
     img: imgAstroIcon3,
     highlighted: false,
+    link:"https://divinetalk.in"
   },
 ];
 
@@ -40,7 +43,7 @@ export default function Features() {
 
       <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
         {/* Pill Badge */}
-        <div className="pill-badge">
+        <div className="pill-badge flex items-center gap-2">
           <img src={imgTrophy} className="w-5 h-5 object-contain" alt="" />
           <span>Top Choice | Find Your True Direction &gt;</span>
         </div>
@@ -62,11 +65,10 @@ export default function Features() {
           {featureItems.map((item) => (
             <div
               key={item.id}
-              className={`flex flex-col justify-between p-8 rounded-2xl bg-black/80 backdrop-blur-md text-left transition-all duration-300 hover:-translate-y-1 ${
-                item.highlighted
+              className={`flex flex-col justify-between p-8 rounded-2xl bg-black/80 backdrop-blur-md text-left transition-all duration-300 hover:-translate-y-1 ${item.highlighted
                   ? "border-2 border-[#fe9100] shadow-lg shadow-orange-500/10"
                   : "border border-white/20 hover:border-white/40"
-              }`}
+                }`}
             >
               <div>
                 <div className="w-16 h-16 rounded-full bg-[#1a1a1a] flex items-center justify-center p-3">
@@ -87,7 +89,7 @@ export default function Features() {
               </div>
 
               <a
-                href="#steps"
+                href={item.link}
                 className="mt-8 inline-flex items-center gap-2 text-[#fe9100] font-bold text-base hover:gap-3 transition-all"
               >
                 <span>Get App</span>

@@ -39,7 +39,7 @@ const testimonials = [
 export default function Stats() {
   return (
     <section
-      className="relative w-full py-20 md:py-32 bg-radial-astrology overflow-hidden"
+      className="relative w-full py-20 md:py-32 bg-[#050201] overflow-hidden"
       id="stats"
     >
       {/* Background Decorative Blur & Artwork */}
@@ -49,15 +49,12 @@ export default function Stats() {
       <div className="absolute top-80 md:top-30 -right-20 w-48 md:w-80 opacity-20 pointer-events-none select-none">
         <img src={imgAsset44X1} alt="" className="w-full h-auto" />
       </div>
-      <div className="absolute -bottom-10 -left-20 w-48 md:w-80 opacity-20 pointer-events-none select-none rotate-20">
-        <img src={imgAsset34X1} alt="" className="w-full h-auto" />
-      </div>
 
       <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
         {/* Pill Badge */}
-        <div className="pill-badge">
+        <div className="flex items-center gap-2 px-4 py-1.5 rounded-full border border-[#fe9100]/30 bg-[#fe9100]/10 text-[#fe9100] text-sm font-medium">
           <img src={imgRating} className="w-5 h-5 object-contain" alt="" />
-          <span>Success Stories | Hear from our community &gt;</span>
+          <span className="text-white">Success Stories | Hear from our community &gt;</span>
         </div>
 
         {/* Section Heading */}
@@ -72,78 +69,70 @@ export default function Stats() {
           and peace of mind every single day.
         </p>
 
-        {/* Desktop Showcase Grid (Phone center + Testimonials sides) */}
-        <div className="mt-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          {/* Left Testimonials (Rahul & Priya) */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
+        {/* Desktop Showcase Grid */}
+        <div className="mt-16 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          {/* Left Testimonials (Tail points RIGHT) */}
+          <div className="lg:col-span-4 flex flex-col gap-10">
             {[testimonials[0], testimonials[1]].map((item) => (
               <div
                 key={item.id}
-                className="bg-[#100704] border border-[#8b5104] rounded-2xl p-6 sm:p-8 text-left transition-all duration-300 hover:border-[#fe9100] shadow-lg shadow-black/50"
+                className="group relative bg-[#100704] border border-[#8b5104] rounded-[2rem] p-6 text-left transition-all duration-300 hover:border-[#fe9100] shadow-xl
+                           lg:after:content-[''] lg:after:absolute lg:after:top-10 lg:after:-right-[11px] lg:after:w-5 lg:after:h-5 lg:after:bg-[#100704] lg:after:border-t lg:after:border-r lg:after:border-[#8b5104] lg:after:rotate-45 group-hover:after:border-[#fe9100]"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white">
-                      {item.name}
-                    </h3>
-                    <div className="text-[#fe9100] text-sm tracking-widest mt-1">
-                      ★★★★★
-                    </div>
+                    <h3 className="text-xl font-bold text-white">{item.name}</h3>
+                    <div className="text-[#fe9100] text-sm mt-1">★★★★★</div>
                   </div>
                   <img
                     src={item.avatar}
                     alt={item.name}
-                    className="w-14 h-14 rounded-full object-cover border border-[#8b5104]"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-[#8b5104] group-hover:border-[#fe9100]"
                   />
                 </div>
                 <hr className="my-4 border-[#8b5104]/30" />
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                  {item.text}
-                </p>
+                <p className="text-gray-300 text-sm leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
 
           {/* Center Phone Mockup */}
-          <div className="hidden lg:col-span-4 md:flex justify-center items-center py-6">
-            <div className="relative w-64 sm:w-80 md:w-96 max-w-full drop-shadow-[0_20px_50px_rgba(254,145,0,0.15)]">
+          <div className="lg:col-span-4 flex justify-center items-center">
+            <div className="relative w-64 sm:w-72 md:w-80 lg:w-full max-w-sm">
               <img
                 src={imgPhoneMockup}
                 alt="DivineTalk App Interface"
-                className="w-full h-auto object-contain pointer-events-none"
+                className="w-full h-auto object-contain drop-shadow-[0_0_30px_rgba(254,145,0,0.2)]"
               />
             </div>
           </div>
 
-          {/* Right Testimonials (Anjali & Vikram) */}
-          <div className="lg:col-span-4 flex flex-col gap-6">
+          {/* Right Testimonials (Tail points LEFT) */}
+          <div className="lg:col-span-4 flex flex-col gap-10">
             {[testimonials[2], testimonials[3]].map((item) => (
               <div
                 key={item.id}
-                className="bg-[#100704] border border-[#8b5104] rounded-2xl p-6 sm:p-8 text-left transition-all duration-300 hover:border-[#fe9100] shadow-lg shadow-black/50"
+                className="group relative bg-[#100704] border border-[#8b5104] rounded-[2rem] p-6 text-left transition-all duration-300 hover:border-[#fe9100] shadow-xl
+                           lg:after:content-[''] lg:after:absolute lg:after:top-10 lg:after:-left-[11px] lg:after:w-5 lg:after:h-5 lg:after:bg-[#100704] lg:after:border-b lg:after:border-l lg:after:border-[#8b5104] lg:after:rotate-45 group-hover:after:border-[#fe9100]"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white">
-                      {item.name}
-                    </h3>
-                    <div className="text-[#fe9100] text-sm tracking-widest mt-1">
-                      ★★★★★
-                    </div>
+                    <h3 className="text-xl font-bold text-white">{item.name}</h3>
+                    <div className="text-[#fe9100] text-sm mt-1">★★★★★</div>
                   </div>
                   <img
                     src={item.avatar}
                     alt={item.name}
-                    className="w-14 h-14 rounded-full object-cover border border-[#8b5104]"
+                    className="w-14 h-14 rounded-full object-cover border-2 border-[#8b5104] group-hover:border-[#fe9100]"
                   />
                 </div>
                 <hr className="my-4 border-[#8b5104]/30" />
-                <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                  {item.text}
-                </p>
+                <p className="text-gray-300 text-sm leading-relaxed">{item.text}</p>
               </div>
             ))}
           </div>
+          
         </div>
       </div>
     </section>

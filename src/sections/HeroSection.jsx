@@ -59,7 +59,8 @@ export default function HeroSection() {
             Our Features
           </a>
           <a
-            href="#steps"
+            href={window.getPlayStoreLink ? window.getPlayStoreLink() : "https://play.google.com/store/apps/details?id=app.divine"}
+            target="_blank"
             className="text-white hover:text-[#fe9100] transition-colors"
           >
             Download Our App
@@ -69,7 +70,8 @@ export default function HeroSection() {
         {/* Desktop CTA Button */}
         <div className="hidden md:block">
           <a
-            href="#chat"
+            href={"https://divinetalk.in/Astrology"}
+            target="_blank"
             className="font-gilroy inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-orange-red text-white text-2xl font-normal shadow-lg shadow-orange-500/20 hover:scale-105 transition-transform"
           >
             Get Free Chat
@@ -112,14 +114,16 @@ export default function HeroSection() {
             Our Features
           </a>
           <a
-            href="#steps"
+            href={window.getPlayStoreLink ? window.getPlayStoreLink() : "https://play.google.com/store/apps/details?id=app.divine"}
+            target="_blank"
             onClick={() => setMobileMenuOpen(false)}
             className="text-white text-lg py-2"
           >
             Download Our App
           </a>
           <a
-            href="#chat"
+            href={"https://divinetalk.in/Astrology"}
+            target="_blank"
             onClick={() => setMobileMenuOpen(false)}
             className="mt-2 inline-flex items-center justify-center w-full py-3 rounded-full bg-gradient-orange-red text-white font-bold"
           >
@@ -146,7 +150,8 @@ export default function HeroSection() {
         {/* Action Buttons */}
         <div className="mt-8 flex flex-col sm:flex-row items-center gap-6">
           <a
-            href="#chat"
+            href={"https://divinetalk.in/Astrology"}
+            target="_blank"
             className="inline-flex items-center justify-center px-5 md:px-12 py-2 md:py-4 rounded-full bg-gradient-orange-red text-white text-lg sm:text-[14px] md:text-[32px] font-normal shadow-xl shadow-orange-600/30 hover:scale-105 transition-transform"
           >
             Get Free Chat

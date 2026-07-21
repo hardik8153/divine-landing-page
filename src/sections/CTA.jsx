@@ -25,7 +25,7 @@ export default function CTA() {
 
       <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
         {/* Pill Badge */}
-        <div className="pill-badge">
+        <div className="pill-badge flex items-center gap-2">
           <img src={imgStart} className="w-5 h-5 object-contain" alt="" />
           <span>Get Started | Let the stars guide you &gt;</span>
         </div>
@@ -45,7 +45,8 @@ export default function CTA() {
         {/* Action Button */}
         <div className="mt-10">
           <a
-            href="#chat"
+            href={"https://divinetalk.in/Astrology"}
+            target="_blank"
             className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-gradient-orange-red text-white text-lg sm:text-xl font-bold shadow-2xl shadow-orange-500/30 hover:scale-105 transition-transform"
           >
             Get Free Chat
