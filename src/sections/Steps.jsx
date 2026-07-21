@@ -8,7 +8,7 @@ const stepsData = [
   {
     number: "01",
     tagline: "Get the App",
-    headingPre: "Download DivineTalk for free from",
+    headingPre: `Download DivineTalk for free from`,
     headingHi: "Google Play.",
     image: imgAppShowcase1,
     isBadge: true,
@@ -60,22 +60,23 @@ export default function Steps() {
           {stepsData.map((step) => (
             <div
               key={step.number}
-              className={`flex flex-col ${
+              className={`flex flex-col ml-20 ${
                 step.imageLeft ? "lg:flex-row-reverse" : "lg:flex-row"
               } items-center justify-between gap-12 text-left relative`}
             >
               {/* Text Content Block */}
-              <div className="w-full lg:w-1/2 flex flex-col items-start relative pt-8">
+              <div className="w-full lg:w-1/2 flex flex-col items-start relative pt-8 ">
                 {/* Number Watermark */}
-                <span className="absolute -top-6 left-0 text-7xl sm:text-9xl font-black text-white/10 select-none pointer-events-none">
+                <span className="absolute -top-2 -left-15 md:-top-6 md:-left-20 text-7xl sm:text-9xl font-black text-white/10 select-none pointer-events-none">
                   {step.number}
                 </span>
 
                 <div className="relative z-10">
-                  <p className="text-xs sm:text-sm font-extrabold tracking-[4px] uppercase bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
-                    - {step.tagline}
+                  <p className="inline-flex gap-3 text-xs sm:text-sm font-extrabold tracking-[4px] uppercase bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent">
+                    <div className="h-px w-10 md:w-15 mt-2 bg-linear-to-r from-[#fe9100] to-[#d92439]" />{" "}
+                    { step.tagline}
                   </p>
-                  <div className="h-0.5 w-12 mt-2 bg-linear-to-r from-[#fe9100] to-[#d92439]" />
+                  {/* <div className="h-0.5 w-12 mt-2 bg-linear-to-r from-[#fe9100] to-[#d92439]" /> */}
                 </div>
 
                 <h3 className="mt-6 text-2xl sm:text-3xl md:text-4xl font-normal leading-tight text-white relative z-10">
@@ -101,7 +102,7 @@ export default function Steps() {
               {/* Image Block */}
               <div className="w-full lg:w-1/2 flex justify-center items-center">
                 <div
-                  className={`relative w-full max-w-md h-80 sm:h-96 md:h-112.5 flex items-center justify-center ${
+                  className={`relative w-full max-w-md sm:min-h-96 md:h-112.5 flex items-start md:items-center justify-center ${
                     step.isBadge
                       ? "p-4"
                       : "rounded-3xl overflow-hidden bg-[#100704] border border-[#8b5104]/40 shadow-2xl shadow-black/80"

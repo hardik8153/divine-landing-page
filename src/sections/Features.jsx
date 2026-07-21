@@ -34,7 +34,7 @@ export default function Features() {
     <section className="relative w-full py-20 md:py-32 bg-radial-astrology overflow-hidden" id="features">
       {/* Background Decorative Blur & Zodiac Icon */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#fe9100]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute top-10 right-0 w-48 md:w-80 opacity-20 pointer-events-none select-none -rotate-45">
+      <div className="absolute top-10 -right-25 w-48 md:w-80 opacity-20 pointer-events-none select-none -rotate-45">
         <img src={imgCancer4X1} alt="" className="w-full h-auto object-contain" />
       </div>
 

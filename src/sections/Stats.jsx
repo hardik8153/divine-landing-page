@@ -38,13 +38,19 @@ const testimonials = [
 
 export default function Stats() {
   return (
-    <section className="relative w-full py-20 md:py-32 bg-radial-astrology overflow-hidden" id="stats">
+    <section
+      className="relative w-full py-20 md:py-32 bg-radial-astrology overflow-hidden"
+      id="stats"
+    >
       {/* Background Decorative Blur & Artwork */}
       <div className="absolute top-1/3 left-0 w-64 md:w-96 opacity-20 pointer-events-none select-none">
         <img src={imgVectorSmartObject2} alt="" className="w-full h-auto" />
       </div>
-      <div className="absolute bottom-10 right-0 w-48 md:w-80 opacity-20 pointer-events-none select-none">
+      <div className="absolute top-80 md:top-30 -right-20 w-48 md:w-80 opacity-20 pointer-events-none select-none">
         <img src={imgAsset44X1} alt="" className="w-full h-auto" />
+      </div>
+      <div className="absolute -bottom-10 -left-20 w-48 md:w-80 opacity-20 pointer-events-none select-none rotate-20">
+        <img src={imgAsset34X1} alt="" className="w-full h-auto" />
       </div>
 
       <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
@@ -55,10 +61,10 @@ export default function Stats() {
         </div>
 
         {/* Section Heading */}
-        <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white max-w-4xl leading-tight">
-          Empowering thousands with{" "}
-          <span className="text-[#fe9100]">precise readings</span> and{" "}
-          <span className="text-[#fe9100]">Life-altering advice.</span>
+        <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white max-w-5xl leading-tight">
+          Empowering Thousands With{" "}
+          <span className="text-[#fe9100]">Precise Readings</span> and{" "}
+          <span className="text-[#fe9100]">Life-Altering Advice.</span>
         </h2>
 
         <p className="mt-4 text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
@@ -99,7 +105,7 @@ export default function Stats() {
           </div>
 
           {/* Center Phone Mockup */}
-          <div className="lg:col-span-4 flex justify-center items-center py-6">
+          <div className="hidden lg:col-span-4 md:flex justify-center items-center py-6">
             <div className="relative w-64 sm:w-80 md:w-96 max-w-full drop-shadow-[0_20px_50px_rgba(254,145,0,0.15)]">
               <img
                 src={imgPhoneMockup}
