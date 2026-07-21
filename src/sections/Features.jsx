@@ -35,7 +35,7 @@ function FeatureCard({ left, top, highlighted, title, desc, img }) {
         {desc}
       </p>
       <a
-        href="#download"
+        href={window.getPlayStoreLink()}
         className="absolute font-normal text-[28px] text-[#fe9100] flex items-center gap-5"
         style={{ left: left + 32, top: top + 342 }}
       >
@@ -90,7 +90,7 @@ export default function Features({ isMobile }) {
               Get personalized daily, weekly, and monthly insights aligned with
               your zodiac.
             </p>
-            <a href="#download">
+            <a href={window.getPlayStoreLink()}>
               Get App
               <img
                 alt=""
@@ -110,7 +110,7 @@ export default function Features({ isMobile }) {
               Calculate deep relationship compatibility scores for a harmonious
               future together.
             </p>
-            <a href="#download">
+            <a href={window.getPlayStoreLink()}>
               Get App
               <img
                 alt=""
@@ -130,7 +130,7 @@ export default function Features({ isMobile }) {
               Track auspicious timings and daily planetary alignments with
               precise accuracy.
             </p>
-            <a href="#download">
+            <a href={window.getPlayStoreLink()}>
               Get App
               <img
                 alt=""

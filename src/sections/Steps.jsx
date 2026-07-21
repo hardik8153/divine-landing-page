@@ -29,15 +29,17 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
             width: 566,
             height: 720,
           }}
+
         >
+          <a href={window.getPlayStoreLink()} className="w-full h-full flex items-center justify-center">
 
-
-          <img
-            alt={tagline}
-            className={isGooglePlayBadge ? "w-100 h-auto object-contain relative z-10" : "w-full h-full object-cover"}
-            src={image}
-            style={isGooglePlayBadge ? { filter: "none" } : undefined}
-          />
+            <img
+              alt={tagline}
+              className={isGooglePlayBadge ? "w-100 h-auto object-contain relative z-10" : "w-full h-full object-cover"}
+              src={image}
+              style={isGooglePlayBadge ? { filter: "none" } : undefined}
+            />
+          </a>
         </div>
       )}
 
@@ -67,7 +69,7 @@ function StepBlock({ top, number, tagline, headingPre, headingHi, image, imageLe
           {headingPre} <span className="text-[#fe9100]">{headingHi}</span>
         </p>
         <a
-          href="#chat"
+          href={window.getPlayStoreLink()}
           className="flex items-center gap-3 font-bold text-[28px] bg-linear-to-r from-[#fe9100] to-[#d92439] bg-clip-text text-transparent relative z-10"
         >
           Get Started Now

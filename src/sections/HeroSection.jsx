@@ -147,7 +147,7 @@ export default function HeroSection({ isMobile }) {
           Our Features
         </a>
         <a
-          href="#download"
+          href={window.getPlayStoreLink()}
           className="absolute font-normal leading-[normal] left-277.5 text-[20px] text-white top-28.25 whitespace-nowrap"
           data-node-id="1:16"
         >

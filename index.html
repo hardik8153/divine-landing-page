@@ -4,12 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DivineTalk — Your Answers Are Just a Tap Away!</title>
+      <link rel="icon" type="image/png" href="/favicon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+    (function () {
+      var q = new URLSearchParams(location.search);
+      var keys = ['gclid','gbraid','wbraid','utm_source','utm_medium','utm_campaign','utm_content','utm_term'];
+      var hit = {};
+      keys.forEach(function (k) { if (q.get(k)) hit[k] = q.get(k); });
+      // First-touch: pehli baar jo aaya wahi rakho (overwrite mat karo)
+      if (Object.keys(hit).length && !localStorage.getItem('dt_attr')) {
+        hit._ts = Date.now();
+        localStorage.setItem('dt_attr', JSON.stringify(hit));
+      }
+    })();
+
+    window.getPlayStoreLink = function() {
+      var baseUrl = 'https://play.google.com/store/apps/details?id=app.divine';
+      var raw = localStorage.getItem('dt_attr');
+      if (!raw) return baseUrl;
+      try {
+        var d = JSON.parse(raw);
+        var parts = [];
+        ['utm_source','utm_medium','utm_campaign','utm_content','utm_term','gclid'].forEach(function (k) {
+          if (d[k]) parts.push(k + '=' + d[k]);
+        });
+        if (parts.length) {
+          return baseUrl + '&referrer=' + encodeURIComponent(parts.join('&'));
+        }
+      } catch(e) {}
+      return baseUrl;
+    };
+    </script>
   </head>
   <body class="bg-black">
     <div id="root"></div>

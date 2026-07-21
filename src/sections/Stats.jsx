@@ -9,23 +9,47 @@ const imgAvatarPriya = "/assets/image2_1_6.png";
 const imgAvatarAnjali = "/assets/image3_1_6.png";
 const imgAvatarVikram = "/assets/image4_1_6.png";
 
-function TestimonialCard({ left, top, w, name, text, textH, avatar }) {
+function TestimonialCard({ left, top, w, name, text, avatar, pointerSide }) {
   return (
     <div
-      className="absolute bg-[#100704] border border-[#8b5104] rounded-3xl flex flex-col gap-4 p-8 animate-fade-in"
-      style={{ left, top, width: w, minHeight: 294 }}
+      className="absolute animate-fade-in flex items-start"
+      style={{ left, top, width: w, zIndex: 20 }}
     >
-      <div className="flex items-center justify-between">
-        <div>
-          <p className="text-white text-[28px] font-medium leading-none mb-2">{name}</p>
-          <span className="text-[#fe9100] text-[20px] tracking-[2px] block mb-2">★★★★★</span>
+      <div className="relative w-full bg-[#0c0905] border border-[#fe9100]/60 rounded-[28px] p-7 shadow-[0_10px_40px_rgba(0,0,0,0.7)]">
+
+        {/* Header: Name and Avatar */}
+        <div className="flex justify-between items-start mb-1">
+          <div>
+            <h3 className="text-white text-[26px] font-semibold leading-tight">{name}</h3>
+            {/* 5 Stars */}
+            <div className="flex gap-1 mt-1">
+              {[...Array(5)].map((_, i) => (
+                <span key={i} className="text-[#fe9100] text-xl">★</span>
+              ))}
+            </div>
+          </div>
+          <div className="w-16 h-16 rounded-full overflow-hidden border border-white/10">
+            <img src={avatar} alt={name} className="w-full h-full object-cover" />
+          </div>
         </div>
-        <img alt={name} className="w-16 h-16 rounded-full object-cover" src={avatar} />
+
+        {/* Separator Line */}
+        <div className="w-full h-[1px] bg-white/15 my-5"></div>
+
+        {/* Review Text */}
+        <p className="text-[#b3b3b3] text-[18px] leading-[1.6] font-light">
+          {text}
+        </p>
+
+        {/* Speech Bubble Arrow (Pointer) */}
+        <div
+          className={`absolute top-12 w-5 h-5 bg-[#0c0905] border-t border-l border-[#fe9100]/60 z-30
+            ${pointerSide === 'left'
+              ? '-left-[11px] -rotate-45'
+              : '-right-[11px] rotate-[135deg]'
+            }`}
+        ></div>
       </div>
-      <hr className="border-[#8b5104]/30" />
-      <p className="text-[#939393] text-[20px] leading-relaxed" style={{ minHeight: textH }}>
-        {text}
-      </p>
     </div>
   );
 }
@@ -168,6 +192,7 @@ export default function Stats({ isMobile }) {
         name="Rahul"
         text="Is app ki wajah se main khud ko aur deeply samajh paaya hoon. Meri personalized readings bilkul spot on thi!"
         textH={96}
+        pointerSide="right"
         avatar={imgAvatarRahul}
       />
       <TestimonialCard
@@ -177,6 +202,7 @@ export default function Stats({ isMobile }) {
         name="Priya"
         text="Yahan ki guidance se mujhe apne future aur relationships ko lekar kaafi clarity mili hai. Experts ki advice bahut trustworthy hai."
         textH={120}
+        pointerSide="right"
         avatar={imgAvatarPriya}
       />
       <TestimonialCard
@@ -186,6 +212,7 @@ export default function Stats({ isMobile }) {
         name="Anjali"
         text="Daily horoscopes aur insights ne mujhe life mein better decisions lene mein bahut help ki hai. Yeh app sach mein amazing hai!"
         textH={120}
+        pointerSide="left"
         avatar={imgAvatarAnjali}
       />
       <TestimonialCard
@@ -193,6 +220,7 @@ export default function Stats({ isMobile }) {
         top={3504}
         w={382}
         name="Vikram"
+        pointerSide="left"
         text="Pehli baar kisi astrology app par itna trust hua hai. Yahan ke astrologers jo batate hain, wo ekdum sach aur accurate hota hai."
         textH={120}
         avatar={imgAvatarVikram}
