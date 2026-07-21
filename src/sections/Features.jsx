@@ -5,205 +5,102 @@ const imgAstroIcon2 = "/assets/dailyHoroscope2.png";
 const imgAstroIcon3 = "/assets/todayPanchang.png";
 const imgTrophy = "/assets/trophy.png";
 
-function FeatureCard({ left, top, highlighted, title, desc, img }) {
+const featureItems = [
+  {
+    id: "kundli",
+    title: "Kundli Match",
+    desc: "Calculate deep relationship compatibility scores for a harmonious future together.",
+    img: imgAstroIcon1,
+    highlighted: false,
+  },
+  {
+    id: "horoscope",
+    title: "Daily Horoscopes",
+    desc: "Get personalized daily, weekly, and monthly insights aligned with your zodiac.",
+    img: imgAstroIcon2,
+    highlighted: true,
+  },
+  {
+    id: "panchang",
+    title: "Today's Panchang",
+    desc: "Track auspicious timings and daily planetary alignments with precise accuracy.",
+    img: imgAstroIcon3,
+    highlighted: false,
+  },
+];
+
+export default function Features() {
   return (
-    <div className="absolute contents" style={{ left, top }}>
-      <div
-        className={`absolute bg-black h-102.25 rounded-[20px] w-115 ${
-          highlighted
-            ? "border border-[#fe9100]"
-            : "border border-[rgba(255,255,255,0.5)]"
-        }`}
-        style={{ left, top }}
-      />
-      <div
-        className="absolute size-24 rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center"
-        style={{ left: left + 32, top: top + 32 }}
-      >
-        <img alt="" className="w-16 h-16 opacity-90 object-contain" src={img} />
+    <section className="relative w-full py-20 md:py-32 bg-radial-astrology overflow-hidden" id="features">
+      {/* Background Decorative Blur & Zodiac Icon */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-[#fe9100]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-10 -right-25 w-48 md:w-80 opacity-20 pointer-events-none select-none -rotate-45">
+        <img src={imgCancer4X1} alt="" className="w-full h-auto object-contain" />
       </div>
-      <p
-        className="absolute font-bold text-[32px] text-white whitespace-nowrap"
-        style={{ left: left + 32, top: top + 148 }}
-      >
-        {title}
-      </p>
-      <p
-        className="absolute font-normal text-[24px] text-[#939393] w-99"
-        style={{ left: left + 32, top: top + 208 }}
-      >
-        {desc}
-      </p>
-      <a
-        href={window.getPlayStoreLink()}
-        className="absolute font-normal text-[28px] text-[#fe9100] flex items-center gap-5"
-        style={{ left: left + 32, top: top + 342 }}
-      >
-        Get App
-        <img alt="" className="w-4 h-6 -rotate-90" src={imgArrowDown} />
-      </a>
-    </div>
-  );
-}
 
-// 1:1 port of Figma node 1:34 "features"
-export default function Features({ isMobile }) {
-  if (isMobile) {
-    return (
-      <section className="m-features relative" id="features">
-        <div className="absolute h-43.5 -right-20 w-38.25 opacity-20 overflow-hidden -rotate-45">
-          <img
-            alt=""
-            className="w-full h-full object-cover"
-            src={imgCancer4X1}
-          />
-        </div>
-        <div className="m-pill">
-          <img
-            src={imgTrophy}
-            className="w-3.5 h-3.5 inline-block mr-2 align-middle"
-            alt=""
-          />
-          <span className="align-middle">
-            Top Choice | Find Your True Direction &gt;
-          </span>
+      <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">
+        {/* Pill Badge */}
+        <div className="pill-badge">
+          <img src={imgTrophy} className="w-5 h-5 object-contain" alt="" />
+          <span>Top Choice | Find Your True Direction &gt;</span>
         </div>
 
-        <h2>
-          Experience Our <em>Premium Astrology Feature</em>
+        {/* Section Heading */}
+        <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white max-w-4xl leading-tight">
+          Experience Our{" "}
+          <span className="text-[#fe9100]">Premium Astrology Feature</span>
         </h2>
 
-        <p className="m-lead">
-          Get instant, deep insights into your life's path. Our leading
-          astrology feature reveals the cosmic forces shaping your future so you
-          can navigate with confidence.
+        <p className="mt-4 text-gray-400 text-sm sm:text-base md:text-lg max-w-2xl leading-relaxed">
+          Get instant, deep insights into your life's path. Our leading astrology
+          feature reveals the cosmic forces shaping your future so you can navigate
+          with confidence.
         </p>
 
-        <div className="m-card-list">
-          {/* Card 1: Daily Horoscopes (selected) */}
-          <div className="m-feature-card selected">
-            <div className="size-16 rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-              <img src={imgAstroIcon2} alt="" className="max-w-10 max-h-10" />
-            </div>
-            <h3>Daily Horoscopes</h3>
-            <p>
-              Get personalized daily, weekly, and monthly insights aligned with
-              your zodiac.
-            </p>
-            <a href={window.getPlayStoreLink()}>
-              Get App
-              <img
-                alt=""
-                className="max-w-2.5 max-h-4 -rotate-90 inline-block ml-5"
-                src={imgArrowDown}
-              />
-            </a>
-          </div>
+        {/* Responsive Feature Cards Grid */}
+        <div className="mt-16 w-full grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+          {featureItems.map((item) => (
+            <div
+              key={item.id}
+              className={`flex flex-col justify-between p-8 rounded-2xl bg-black/80 backdrop-blur-md text-left transition-all duration-300 hover:-translate-y-1 ${
+                item.highlighted
+                  ? "border-2 border-[#fe9100] shadow-lg shadow-orange-500/10"
+                  : "border border-white/20 hover:border-white/40"
+              }`}
+            >
+              <div>
+                <div className="w-16 h-16 rounded-full bg-[#1a1a1a] flex items-center justify-center p-3">
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
 
-          {/* Card 2: Kundli Match */}
-          <div className="m-feature-card">
-            <div className="size-16 rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-              <img src={imgAstroIcon1} alt="" className="max-w-10 max-h-10" />
-            </div>
-            <h3>Kundli Match</h3>
-            <p>
-              Calculate deep relationship compatibility scores for a harmonious
-              future together.
-            </p>
-            <a href={window.getPlayStoreLink()}>
-              Get App
-              <img
-                alt=""
-                className="max-w-2.5 max-h-4 -rotate-90 inline-block ml-5"
-                src={imgArrowDown}
-              />
-            </a>
-          </div>
+                <h3 className="mt-6 text-xl sm:text-2xl font-bold text-white">
+                  {item.title}
+                </h3>
 
-          {/* Card 3: Today's Panchang */}
-          <div className="m-feature-card">
-            <div className="size-16 rounded-full overflow-hidden bg-[#1a1a1a] flex items-center justify-center">
-              <img src={imgAstroIcon3} alt="" className="max-w-10 max-h-10" />
+                <p className="mt-3 text-gray-400 text-sm sm:text-base leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+
+              <a
+                href="#steps"
+                className="mt-8 inline-flex items-center gap-2 text-[#fe9100] font-bold text-base hover:gap-3 transition-all"
+              >
+                <span>Get App</span>
+                <img
+                  src={imgArrowDown}
+                  alt=""
+                  className="w-3.5 h-3.5 -rotate-90"
+                />
+              </a>
             </div>
-            <h3>Today's Panchang</h3>
-            <p>
-              Track auspicious timings and daily planetary alignments with
-              precise accuracy.
-            </p>
-            <a href={window.getPlayStoreLink()}>
-              Get App
-              <img
-                alt=""
-                className="max-w-2.5 max-h-4 -rotate-90 inline-block ml-5"
-                src={imgArrowDown}
-              />
-            </a>
-          </div>
+          ))}
         </div>
-      </section>
-    );
-  }
-
-  // Desktop Layout
-  return (
-    <div className="contents" data-node-id="1:34">
-      <div className="absolute h-305.75 left-105.75 top-[1810px] w-273.5 rounded-full bg-[#3a1a05] opacity-40 blur-[80px]" />
-      <div className="absolute h-152.25 -right-40 top-288.25 w-133.75 opacity-20 overflow-hidden -rotate-45">
-        <img alt="" className="w-full h-full object-cover" src={imgCancer4X1} />
       </div>
-
-      <div
-        className="absolute left-55.5 top-[2306px] w-369`border-t border-white/15"
-        data-node-id="1:39"
-      />
-
-      <p
-        className="absolute font-normal left-97.5 text-[72px] text-center text-white top-340 w-280.5 capitalize"
-        data-node-id="1:41"
-      >
-        Experience Our{" "}
-        <span className="text-[#fe9100]">Premium Astrology Feature</span>
-      </p>
-
-      <p
-        className="absolute font-normal leading-[normal] left-122 text-[#939393] text-[24px] text-center top-[1588px] w-235.75"
-        data-node-id="1:42"
-      >
-        Get instant, deep insights into your life's path. Our leading astrology
-        feature reveals the cosmic forces shaping your future so you can
-        navigate with confidence.
-      </p>
-
-      <FeatureCard
-        left={730}
-        top={1730}
-        highlighted
-        title="Daily Horoscopes"
-        desc="Get personalized daily, weekly, and monthly insights aligned with your zodiac."
-        img={imgAstroIcon2}
-      />
-      <FeatureCard
-        left={1238}
-        top={1733}
-        title="Today's Panchang"
-        desc="Track auspicious timings and daily planetary alignments with precise accuracy."
-        img={imgAstroIcon3}
-      />
-      <FeatureCard
-        left={222}
-        top={1730}
-        title="Kundli Match"
-        desc="Calculate deep relationship compatibility scores for a harmonious future together."
-        img={imgAstroIcon1}
-      />
-
-      <div
-        className="absolute bg-black border-[#fe9100] border-[0.5px] border-solid h-16 left-172 rounded-[40px] top-312 w-142.5 flex items-center gap-3 px-8"
-        data-node-id="1:86"
-      >
-        <img alt="" className="size-8" src={imgTrophy} />
-        <span className="font-normal text-[24px] text-white whitespace-pre">{`Top Choice  | Find Your True Direction  >`}</span>
-      </div>
-    </div>
+    </section>
   );
 }
