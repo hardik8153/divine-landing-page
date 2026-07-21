@@ -8,12 +8,19 @@ export default function CTA() {
     >
       {/* Background Banner */}
       <div className="absolute inset-0 -z-10 w-full h-full">
+        {/* Mobile Background */}
+        <img
+          src="/assets/ctaMobile.png"
+          alt=""
+          className="md:hidden w-full h-full object-cover opacity-100"
+        />
+        {/* Desktop Background */}
         <img
           src="/assets/image16_1_6.png"
           alt=""
-          className="w-full h-full object-cover opacity-30"
+          className="hidden md:block w-full h-full object-cover opacity-100"
         />
-        <div className="absolute inset-0 bg-linear-to-b from-[#020001] via-transparent to-[#020001]" />
+        {/* <div className="absolute inset-0 bg-linear-to-b from-[#020001] via-transparent to-[#020001]" /> */}
       </div>
 
       <div className="w-full max-w-7xl mx-auto px-6 flex flex-col items-center text-center relative z-10">

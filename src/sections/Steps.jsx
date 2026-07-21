@@ -67,7 +67,7 @@ export default function Steps() {
               {/* Text Content Block */}
               <div className="w-full lg:w-1/2 flex flex-col items-start relative pt-8 ">
                 {/* Number Watermark */}
-                <span className="absolute -top-2 -left-15 md:-top-6 md:-left-20 text-7xl sm:text-9xl font-black text-white/10 select-none pointer-events-none">
+                <span className="absolute -top-17 -left-18 md:-top-6 md:-left-20 text-[120px] sm:text-9xl font-black text-white/10 select-none pointer-events-none">
                   {step.number}
                 </span>
 
