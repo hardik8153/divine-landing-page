@@ -1,6 +1,7 @@
 import { useState } from "react";
 
 const imgBgLanding1 = "/assets/image0_1_6.png";
+const imgBgMobile = "/assets/hero_mobile.png";
 const imgLightLogo4X1 = "/assets/image1_1_6.png";
 const imgEllipse1728 = "/assets/image2_1_6.png";
 const imgEllipse1729 = "/assets/image3_1_6.png";
@@ -15,10 +16,17 @@ export default function HeroSection() {
     <header className="relative w-full min-h-screen flex flex-col justify-between bg-[#020001] overflow-hidden isolate" id="home">
       {/* Background Hero Banner */}
       <div className="absolute inset-0 -z-10 w-full h-full">
+        {/* Mobile Background */}
+        <img
+          src={imgBgMobile}
+          alt=""
+          className="md:hidden w-full h-full object-cover object-bottom opacity-80"
+        />
+        {/* Desktop Background */}
         <img
           src={imgBgLanding1}
           alt=""
-          className="w-full h-full object-cover object-top opacity-60 md:opacity-100"
+          className="hidden md:block w-full h-full object-cover object-top opacity-100"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/40 to-[#020001]" />
       </div>

@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@theme {
+  --font-gilroy: "Gilroy-ExtraBold", "Gilroy-Bold", "Gilroy-Regular", "Gilroy", "Poppins", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+}
+
 * {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -13,6 +18,19 @@ body {
   background-color: #020001;
   color: #ffffff;
   overflow-x: hidden;
+}
+
+/* Typography Rules */
+h1,
+h2,
+h3,
+.font-gilroy {
+  font-family: "Gilroy-ExtraBold", "Gilroy-Bold", "Gilroy-Regular", "Gilroy", "Poppins", sans-serif;
+}
+
+footer,
+.font-poppins {
+  font-family: "Poppins", sans-serif;
 }
 
 /* Custom radial gradient background for section highlights */
