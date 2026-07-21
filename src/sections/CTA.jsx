@@ -53,10 +53,11 @@ export default function CTA({ isMobile }) {
       </div>
 
       <p
-        className="absolute font-extrabold leading-[normal] left-55.5 text-[56px] text-center text-white top-[7242px] w-369"
+        className="absolute font-normal leading-[normal] left-55.5 text-[72px] text-center text-white top-[7242px] w-369"
         data-node-id="1:243"
       >
-        Start Your Journey with DivineTalk
+        Start Your Journey With
+        <span className="text-[#fe9100]"> DivineTalk</span>
       </p>
 
       <p
