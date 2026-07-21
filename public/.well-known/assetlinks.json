@@ -1,0 +1,30 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "app.divine.uat",
+            "sha256_cert_fingerprints": [
+                "43:63:F4:9F:66:3F:98:F8:C8:8F:A7:EB:00:31:9F:83:A0:4A:40:39:C4:5C:9D:A1:31:90:57:83:D5:2C:FB:87"
+            ]
+        }
+    },
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "app.divine",
+            "sha256_cert_fingerprints": [
+                "15:DF:C9:DB:A8:F7:A0:40:40:D5:0C:E2:0E:80:48:C5:BC:45:F2:5E:77:D6:A2:26:1A:A6:A1:55:82:DA:87:48",
+                "00:5C:3F:AF:2A:47:DA:31:D5:38:8F:55:A3:D0:6A:FD:01:80:E1:FC:04:72:12:15:F1:37:66:11:43:35:D0:15",
+                "BC:7F:9A:31:48:FD:4A:DA:C1:DA:D1:48:99:14:47:A3:A8:A2:5A:A3:F7:D0:0A:C7:54:B8:C0:AA:90:BB:5F:DC",
+                "05:68:55:E4:D6:78:F2:3D:F4:E9:AD:61:F4:34:B9:6E:0C:C5:50:64:9B:6C:CF:55:23:2E:FF:71:F6:69:CF:A9",
+                "10:C5:17:7B:D1:66:9D:DA:87:41:E3:60:5F:12:3C:9D:F2:49:5E:89:81:81:4F:FB:48:14:CD:4F:12:5C:05:37"
+            ]
+        }
+    }
+]
