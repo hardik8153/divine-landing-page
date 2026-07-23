@@ -77,8 +77,8 @@ export default function Stats() {
             {[testimonials[0], testimonials[1]].map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-[#100704] border border-[#8b5104] rounded-[2rem] p-6 text-left transition-all duration-300 hover:border-[#fe9100] shadow-xl
-                           lg:after:content-[''] lg:after:absolute lg:after:top-10 lg:after:-right-[11px] lg:after:w-5 lg:after:h-5 lg:after:bg-[#100704] lg:after:border-t lg:after:border-r lg:after:border-[#8b5104] lg:after:rotate-45 group-hover:after:border-[#fe9100]"
+                className="group relative bg-[#100704] border border-[#8b5104] rounded-4xl p-6 text-left transition-all duration-300 hover:border-[#fe9100] shadow-xl
+                           lg:after:content-[''] lg:after:absolute lg:after:top-10 lg:after:-right-2.75 lg:after:w-5 lg:after:h-5 lg:after:bg-[#100704] lg:after:border-t lg:after:border-r lg:after:border-[#8b5104] lg:after:rotate-45 group-hover:after:border-[#fe9100]"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>
@@ -98,7 +98,7 @@ export default function Stats() {
           </div>
 
           {/* Center Phone Mockup */}
-          <div className="lg:col-span-4 flex justify-center items-center">
+          <div className="hidden lg:col-span-4 lg:flex justify-center items-center">
             <div className="relative w-64 sm:w-72 md:w-80 lg:w-full max-w-sm">
               <img
                 src={imgPhoneMockup}
@@ -113,8 +113,8 @@ export default function Stats() {
             {[testimonials[2], testimonials[3]].map((item) => (
               <div
                 key={item.id}
-                className="group relative bg-[#100704] border border-[#8b5104] rounded-[2rem] p-6 text-left transition-all duration-300 hover:border-[#fe9100] shadow-xl
-                           lg:after:content-[''] lg:after:absolute lg:after:top-10 lg:after:-left-[11px] lg:after:w-5 lg:after:h-5 lg:after:bg-[#100704] lg:after:border-b lg:after:border-l lg:after:border-[#8b5104] lg:after:rotate-45 group-hover:after:border-[#fe9100]"
+                className="group relative bg-[#100704] border border-[#8b5104] rounded-4xl p-6 text-left transition-all duration-300 hover:border-[#fe9100] shadow-xl
+                           lg:after:content-[''] lg:after:absolute lg:after:top-10 lg:after:-left-2.75 lg:after:w-5 lg:after:h-5 lg:after:bg-[#100704] lg:after:border-b lg:after:border-l lg:after:border-[#8b5104] lg:after:rotate-45 group-hover:after:border-[#fe9100]"
               >
                 <div className="flex items-center justify-between gap-4">
                   <div>
