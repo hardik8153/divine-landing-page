@@ -1,4 +1,8 @@
-const imgStart = "/assets/rocket.png";
+import { assetUrl } from "../assetUrl";
+
+const imgStart = assetUrl("rocket.png");
+const imgCtaMobile = assetUrl("ctaMobile.png");
+const imgCtaDesktop = assetUrl("image16_1_6.png");
 
 export default function CTA() {
   return (
@@ -10,13 +14,13 @@ export default function CTA() {
       <div className="absolute inset-0 -z-10 w-full h-full">
         {/* Mobile Background */}
         <img
-          src="/assets/ctaMobile.png"
+          src={imgCtaMobile}
           alt=""
           className="md:hidden w-full h-full object-cover opacity-100"
         />
         {/* Desktop Background */}
         <img
-          src="/assets/image16_1_6.png"
+          src={imgCtaDesktop}
           alt=""
           className="hidden md:block w-full h-full object-cover opacity-100"
         />
