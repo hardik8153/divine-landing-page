@@ -14,7 +14,7 @@ export default function HeroSection() {
 
   return (
     <header
-      className="relative w-full min-h-screen flex flex-col justify-between  overflow-hidden isolate"
+      className="relative w-full  min-h-250 md:min-h-screen flex flex-col justify-between  overflow-hidden isolate"
       id="home"
     >
       {/* Background Hero Banner */}
@@ -22,8 +22,8 @@ export default function HeroSection() {
         {/* Mobile Background */}
         <img
           src={imgBgMobile}
-          alt=""
-          className="md:hidden w-full h-full object-cover object-bottom opacity-100"
+          alt="" 
+          className="md:hidden w-full h-260 object-cover object-bottom opacity-100"
         />
         {/* Desktop Background */}
         <img
