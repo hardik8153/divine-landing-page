@@ -1,13 +1,15 @@
-const imgVectorSmartObject2 = "/assets/image6_1_6.png";
-const imgAsset34X1 = "/assets/image7_1_6.png";
-const imgAsset44X1 = "/assets/image8_1_6.png";
-const imgRating = "/assets/rating.png";
-const imgPhoneMockup = "/assets/image11_1_6.png";
+import { assetUrl } from "../assetUrl";
 
-const imgAvatarRahul = "/assets/image12_1_6.png";
-const imgAvatarPriya = "/assets/image2_1_6.png";
-const imgAvatarAnjali = "/assets/image3_1_6.png";
-const imgAvatarVikram = "/assets/image4_1_6.png";
+const imgVectorSmartObject2 = assetUrl("image6_1_6.png");
+const imgAsset34X1 = assetUrl("image7_1_6.png");
+const imgAsset44X1 = assetUrl("image8_1_6.png");
+const imgRating = assetUrl("rating.png");
+const imgPhoneMockup = assetUrl("image11_1_6.png");
+
+const imgAvatarRahul = assetUrl("image12_1_6.png");
+const imgAvatarPriya = assetUrl("image2_1_6.png");
+const imgAvatarAnjali = assetUrl("image3_1_6.png");
+const imgAvatarVikram = assetUrl("image4_1_6.png");
 
 const testimonials = [
   {

@@ -1,13 +1,14 @@
 import { useState } from "react";
+import { assetUrl } from "../assetUrl";
 
-const imgBgLanding1 = "/assets/image0_1_6.png";
-const imgBgMobile = "/assets/hero_mobile.png";
-const imgLightLogo4X1 = "/assets/image1_1_6.png";
-const imgEllipse1728 = "/assets/image2_1_6.png";
-const imgEllipse1729 = "/assets/image3_1_6.png";
-const imgEllipse1730 = "/assets/image4_1_6.png";
-const imgArrowDown = "/assets/arrow.png";
-const imgHeart = "/assets/Vector.png";
+const imgBgLanding1 = assetUrl("image0_1_6.png");
+const imgBgMobile = assetUrl("hero_mobile.png");
+const imgLightLogo4X1 = assetUrl("image1_1_6.png");
+const imgEllipse1728 = assetUrl("image2_1_6.png");
+const imgEllipse1729 = assetUrl("image3_1_6.png");
+const imgEllipse1730 = assetUrl("image4_1_6.png");
+const imgArrowDown = assetUrl("arrow.png");
+const imgHeart = assetUrl("Vector.png");
 
 export default function HeroSection() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

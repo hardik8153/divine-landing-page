@@ -1,9 +1,11 @@
-const imgCancer4X1 = "/assets/image5_1_6.png";
-const imgArrowDown = "/assets/arrow.png";
-const imgAstroIcon1 = "/assets/mandala.png";
-const imgAstroIcon2 = "/assets/dailyHoroscope2.png";
-const imgAstroIcon3 = "/assets/todayPanchang.png";
-const imgTrophy = "/assets/trophy.png";
+import { assetUrl } from "../assetUrl";
+
+const imgCancer4X1 = assetUrl("image5_1_6.png");
+const imgArrowDown = assetUrl("arrow.png");
+const imgAstroIcon1 = assetUrl("mandala.png");
+const imgAstroIcon2 = assetUrl("dailyHoroscope2.png");
+const imgAstroIcon3 = assetUrl("todayPanchang.png");
+const imgTrophy = assetUrl("trophy.png");
 
 const featureItems = [
   {

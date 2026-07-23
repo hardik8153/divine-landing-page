@@ -1,4 +1,6 @@
-const imgLogo = "/assets/image1_1_6.png";
+import { assetUrl } from "../assetUrl";
+
+const imgLogo = assetUrl("image1_1_6.png");
 
 export default function Footer() {
   return (

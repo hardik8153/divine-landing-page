@@ -1,8 +1,10 @@
-const imgArrowDown = "/assets/arrow.png";
-const imgAppShowcase1 = "/assets/image13_1_6.png";
-const imgAppShowcase2 = "/assets/image14_1_6.png";
-const imgAstrologer1 = "/assets/image15_1_6.png";
-const imgQuestion = "/assets/question.png";
+import { assetUrl } from "../assetUrl";
+
+const imgArrowDown = assetUrl("arrow.png");
+const imgAppShowcase1 = assetUrl("image13_1_6.png");
+const imgAppShowcase2 = assetUrl("image14_1_6.png");
+const imgAstrologer1 = assetUrl("image15_1_6.png");
+const imgQuestion = assetUrl("question.png");
 
 const stepsData = [
   {
